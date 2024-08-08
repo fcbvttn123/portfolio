@@ -2,7 +2,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline"
 
 export function HeaderBar() {
   return (
-    <header className="flex items-end justify-between py-3 px-4">
+    <header className="flex items-end justify-between">
       <button
         className="text-color font-extrabold text-2xl hover:cursor-pointer"
         onClick={(e) => console.log("home page")}
