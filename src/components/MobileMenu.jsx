@@ -1,30 +1,12 @@
-import { Drawer, Hidden, useTheme } from "@material-ui/core"
-import { useStyles } from "../mui-styles/mobileMenu"
+import Drawer from "@mui/material/Drawer"
+import Box from "@mui/material/Box"
 
-export function MobileMenu({ window, opened, setMobileOpen }) {
-  const classes = useStyles()
-  const container =
-    window !== undefined ? () => window().document.body : undefined
-  const theme = useTheme()
+export function MobileMenu({ opened, setMobileOpen }) {
   return (
-    <nav className={classes.drawer}>
-      <Hidden smUp implementation="css">
-        <Drawer
-          container={container}
-          variant="temporary"
-          anchor={theme.direction === "rtl" ? "right" : "left"}
-          open={opened}
-          onClose={() => setMobileOpen(!opened)}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-          ModalProps={{
-            keepMounted: true,
-          }}
-        >
-          {/* {drawer} */}
-        </Drawer>
-      </Hidden>
-    </nav>
+    <Drawer open={opened} onClose={() => setMobileOpen(false)}>
+      <Box sx={{ width: 250 }} role="presentation">
+        {/* {drawer} */}
+      </Box>
+    </Drawer>
   )
 }
