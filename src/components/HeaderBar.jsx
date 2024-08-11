@@ -2,7 +2,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline"
 
 export function HeaderBar({ setMobileOpen }) {
   return (
-    <header className="flex items-end justify-between">
+    <header className="flex items-end justify-between mb-10">
       <button
         className="text-color font-extrabold text-2xl hover:cursor-pointer"
         onClick={(e) => console.log("home page")}
