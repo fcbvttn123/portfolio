@@ -17,8 +17,6 @@ Learnings:
 
 Todo List 
 
-+ Text 
-
 + RWD
 
 + Scroll Bar 
