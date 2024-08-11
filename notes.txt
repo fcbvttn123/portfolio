@@ -6,7 +6,23 @@ Button Hover Effect: https://render.com/
 
 
 Learnings: 
+
 + Tailwind CSS: Reusable Utility Class
     .my-custom-class {
         @apply text-gray-300 font-extrabold text-2xl;
     }
+
+
+
+
+Todo List 
+
++ Text 
+
++ RWD
+
++ Scroll Bar 
+
++ Mobile Menu
+
++ Footer Contact 
