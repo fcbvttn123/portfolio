@@ -19,8 +19,10 @@ Todo List
 
 + RWD
 
-+ Scroll Bar 
++ Vertical Scroll Bar 
 
 + Mobile Menu
 
-+ Footer Contact 
++ Animation: Hello text
+
++ Add skill section to home page with sliding animation
