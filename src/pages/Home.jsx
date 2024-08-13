@@ -1,6 +1,6 @@
 export function Home() {
   return (
-    <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10">
+    <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10 lg:my-24">
       {/* Flexbox (Desktop) - Left Item */}
       <div className="md:max-w-sm lg:max-w-lg">
         <h1 className="text-4xl lg:text-6xl">Hello</h1>
