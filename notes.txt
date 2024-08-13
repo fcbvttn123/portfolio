@@ -21,6 +21,6 @@ Todo List
 
 + Vertical Scroll Bar 
 
-+ Animation: Hello text
++ Animation: Hello text, nav bar texts in desktop screen
 
 + Add skill section to home page with sliding animation
