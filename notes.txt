@@ -21,8 +21,6 @@ Todo List
 
 + Vertical Scroll Bar 
 
-+ Mobile Menu
-
 + Animation: Hello text
 
 + Add skill section to home page with sliding animation
