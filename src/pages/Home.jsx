@@ -1,10 +1,33 @@
+import { useState } from "react";
+import { useEffect } from "react";
+
+const text = [
+  "Hello! I'm David Vu", 
+  "I'm a Developer", 
+  "I'm a Footballer", 
+  "Nice to meet you!", 
+]
+
 export function Home() {
+  const [index, setIndex] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(prev => {
+        if(prev >= text.length-1) {
+          return 0
+        } else {
+          return prev+1
+        }
+      })
+    }, 3000); 
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10 lg:my-24">
       {/* Flexbox (Desktop) - Left Item */}
       <div className="md:max-w-sm lg:max-w-lg">
-        <h1 className="text-4xl lg:text-6xl">Hello</h1>
-        <h2 className="text-xl lg:text-2xl mb-1 mt-4 tracking-wide">
+        <h1 className="text-4xl lg:text-5xl relative overflow-hidden hello-text-at-home-page">{text[index]}</h1>
+        <h2 className="text-xl lg:text-xl mb-1 mt-4 tracking-wide">
           A Bit About Me
         </h2>
         <p className="tracking-widest leading-6">

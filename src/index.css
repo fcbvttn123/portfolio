@@ -5,3 +5,18 @@
 .text-color {
   @apply text-gray-300;
 }
+
+.hello-text-at-home-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(17 24 39);
+  border-left: 3px solid rgb(209 213 219);
+  animation: example 3s linear .5s infinite;
+}
+
+@keyframes example {
+  0%   {translate: 0 0;}
+  50% {translate: 99% 0;}
+  100% {translate: 0 0;}
+}
