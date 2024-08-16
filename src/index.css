@@ -43,7 +43,6 @@
   color: var(--animation-color);
   width: 0%;
   inset: 0;
-  border-right: var(--border-right) solid var(--animation-color);
   overflow: hidden;
   transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
