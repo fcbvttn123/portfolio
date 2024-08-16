@@ -6,6 +6,7 @@
   @apply text-gray-300;
 }
 
+/* Hello Text Animation */
 .hello-text-at-home-page::before {
   content: "";
   position: absolute;
@@ -25,4 +26,29 @@
   100% {
     translate: 0 0;
   }
+}
+
+/* Nav Link Button styling */
+.nav-link-button {
+  --border-right: 4px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: rgb(209 213 219);
+  --fs-size: 2em;
+  position: relative;
+  color: rgb(209 213 219);
+}
+.nav-link-button-hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+.nav-link-button:hover .nav-link-button-hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
