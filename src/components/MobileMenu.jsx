@@ -34,7 +34,7 @@ export function MobileMenu({ opened, setMobileOpen }) {
           {links.map((e, i) => (
             <ListItem key={e.text + i} disablePadding>
               <Link to={e.path}>
-                <ListItemButton>
+                <ListItemButton onClick={(e) => setMobileOpen(false)}>
                   {e.icon}
                   <p className="text-color ml-4 font-bold text-lg">{e.text}</p>
                 </ListItemButton>
