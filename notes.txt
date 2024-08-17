@@ -12,6 +12,31 @@ Learnings:
         @apply text-gray-300 font-extrabold text-2xl;
     }
 
++ Plain CSS 
+
+    filter: drop-shadow(0 0 23px rgb(209 213 219));
+
+    -webkit-text-stroke: rgb(209 213 219);
+
+    backdrop-filter: blur(5px);
+
+
+
+
++ RGBA Color --> alpha value
+
+	example: rgba(255, 255, 255, 0.05)
+
+
+
+
++ CSS: svg style 
+
+	svg {
+  		font-size: 2.5em;
+  		fill: #fff;
+	}
+
 
 
 

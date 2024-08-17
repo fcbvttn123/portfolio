@@ -1,7 +1,10 @@
+import { Card } from "../components/Card"
+
 export function Projects() {
   return (
-    <section className="text-color">
-      <h1>Projects</h1>
+    <section className="text-color flex gap-x-40">
+      <Card />
+      <Card />
     </section>
   )
 }
