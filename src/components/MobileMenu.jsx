@@ -9,9 +9,9 @@ import { Link } from "react-router-dom"
 export function MobileMenu({ opened, setMobileOpen }) {
   const links = [
     {
-      path: "/resume",
+      path: "/skills",
       icon: <DocumentIcon className="text-color w-8 h-8" />,
-      text: "Resume",
+      text: "Skills",
     },
     {
       path: "/projects",

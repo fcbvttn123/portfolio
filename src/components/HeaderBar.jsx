@@ -15,7 +15,9 @@ export function HeaderBar({ setMobileOpen }) {
       </Link>
       <h2 className="text-color mr-auto ml-4">Software Developer</h2>
       <div className="text-color hidden md:flex md:items-center md:justify-between md:gap-x-4">
-        <NavLinkButton text={"Resume"} />
+        <Link to="/skills">
+          <NavLinkButton text={"Skills"} />
+        </Link>
         <Link to="/projects">
           <NavLinkButton text={"Projects"} />
         </Link>
