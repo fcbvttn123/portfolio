@@ -94,7 +94,6 @@
 }
 
 /* Skill Card Glass */
-
 .skill-card-glass {
   position: relative;
   width: 100%;
@@ -108,7 +107,6 @@
   border-radius: 10px;
   backdrop-filter: blur(10px);
 }
-
 .skill-card-glass::before {
   content: attr(data-text);
   position: absolute;

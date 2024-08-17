@@ -4,6 +4,7 @@ import { List, ListItem, ListItemButton } from "@mui/material"
 import { DocumentIcon } from "@heroicons/react/20/solid"
 import { ComputerDesktopIcon } from "@heroicons/react/20/solid"
 import { EnvelopeIcon } from "@heroicons/react/20/solid"
+import { BriefcaseIcon } from "@heroicons/react/20/solid"
 import { Link } from "react-router-dom"
 
 export function MobileMenu({ opened, setMobileOpen }) {
@@ -17,6 +18,11 @@ export function MobileMenu({ opened, setMobileOpen }) {
       path: "/projects",
       icon: <ComputerDesktopIcon className="text-color w-8 h-8" />,
       text: "Projects",
+    },
+    {
+      path: "/experiences",
+      icon: <BriefcaseIcon className="text-color w-8 h-8" />,
+      text: "Work Experiences",
     },
     {
       path: "/contact",
