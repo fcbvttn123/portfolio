@@ -59,12 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 180px;
   transition: 0.5s;
-}
-
-.card-container:hover {
-  width: 350px;
 }
 
 .card-container .card-glass {
