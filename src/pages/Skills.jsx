@@ -6,7 +6,7 @@ export function Skills() {
       {skills.map((topic) => (
         <div className="row-span-full mb-8">
           <h1 className="text-xl mb-4">{topic.topic}</h1>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {topic.list.map((item) => (
               <div
                 key={item.text}
