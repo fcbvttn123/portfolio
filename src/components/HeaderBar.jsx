@@ -7,7 +7,7 @@ export function HeaderBar({ setMobileOpen }) {
     <header className="flex items-end justify-between mb-10 lg:mb-24">
       <Link to={"/"}>
         <button
-          className="text-color font-extrabold text-2xl hover:cursor-pointer"
+          className="font-extrabold text-2xl hover:cursor-pointer fancy-text-style text-transparent"
           onClick={(e) => console.log("home page")}
         >
           David Vu

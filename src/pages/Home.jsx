@@ -7,7 +7,7 @@ export function Home() {
       {/* Flexbox (Desktop) - Left Item */}
       <div className="md:max-w-sm lg:max-w-lg">
         <HelloTextWithAnimation />
-        <h2 className="text-xl lg:text-xl mb-1 mt-4 tracking-wide">
+        <h2 className="text-xl lg:text-xl mb-1 mt-4 tracking-wide fancy-text-style">
           A Bit About Me
         </h2>
         <p className="tracking-widest leading-6">
