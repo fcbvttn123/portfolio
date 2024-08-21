@@ -201,32 +201,3 @@ li {
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
 }
-.work-details {
-  background: rgb(209 213 219);
-  overflow: hidden;
-  padding: 5px 10px;
-}
-.circles {
-  height: 30px;
-  display: flex;
-  align-items: center;
-}
-.circles {
-  width: 20%;
-  gap: 8px;
-}
-.c {
-  width: 09px;
-  height: 9px;
-  border-radius: 50%;
-  box-shadow: inset 2px 2px 5px rgba(235, 235, 235, 0.356);
-}
-.c:first-child {
-  background-color: red;
-}
-.c:nth-child(2) {
-  background-color: rgb(204, 167, 4);
-}
-.c:last-child {
-  background-color: green;
-}

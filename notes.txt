@@ -50,8 +50,8 @@ Learnings:
 
 Todo List 
 
-+ Bug: Cursor Pointer does not work on each step of stepper component 
++ Implement mobile design for stepper 
 
 + Add one more mini-card for project details (tech stack) in each Card
 
-+ Bug on hover effect on Work Experience Nav Link Button 
++ Bug: hover effect on Work Experience Nav Link Button 
