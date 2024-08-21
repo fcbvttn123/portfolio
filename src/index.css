@@ -18,6 +18,7 @@ ul {
 
 li {
   margin-bottom: 0.5em;
+  text-align: start;
 }
 
 /* Hello Text Animation */

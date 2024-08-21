@@ -62,6 +62,9 @@ export function StepperComponent() {
             marginLeft: "15px",
             paddingLeft: "35px",
           },
+          "& .MuiStepContent-last ul": {
+            paddingLeft: "30px",
+          },
           "& .css-9l5vo-MuiCollapse-wrapperInner": {
             display: "flex",
             flexDirection: "column",
@@ -79,8 +82,10 @@ export function StepperComponent() {
                 {step.label}
               </StepLabel>
               <StepContent>
-                <Typography>{step.company}</Typography>
-                <Typography>{step.period}</Typography>
+                <ul className="pl-3">
+                  <li>{step?.company && step.company}</li>
+                  <li>{step?.period && step.period}</li>
+                </ul>
               </StepContent>
             </button>
           </Step>
