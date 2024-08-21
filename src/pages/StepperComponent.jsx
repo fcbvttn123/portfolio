@@ -35,25 +35,29 @@ export function StepperComponent() {
   const [activeStep, setActiveStep] = useState(0)
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Stepper
+        activeStep={activeStep}
+        orientation="vertical"
+        sx={{
+          "& .Mui-disabled": {
+            color: "rgba(209, 213, 219, .4)",
+            cursor: "pointer",
+          },
+          "& .Mui-completed": {
+            color: "rgba(209, 213, 219, .4)",
+          },
+          "& .Mui-active": {
+            color: "rgba(209, 213, 219, 1.0)",
+          },
+          "& .MuiStepConnector-line": {
+            minHeight: "60px",
+          },
+        }}
+      >
         {steps.map((step, index) => (
-          <Step key={step.label}>
+          <Step>
             <button className="ml-[-3px]" onClick={(e) => setActiveStep(index)}>
-              <StepLabel
-                sx={{
-                  "& .Mui-disabled": {
-                    color: "rgba(209, 213, 219, .4)",
-                    cursor: "pointer",
-                  },
-                  "& .Mui-completed": {
-                    color: "rgba(209, 213, 219, .4)",
-                  },
-                  "& .Mui-active": {
-                    color: "rgba(209, 213, 219, 1.0)",
-                  },
-                }}
-                StepIconComponent={StepLabelIcon}
-              >
+              <StepLabel StepIconComponent={StepLabelIcon}>
                 {step.label}
               </StepLabel>
             </button>
