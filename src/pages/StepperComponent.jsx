@@ -58,7 +58,7 @@ export function StepperComponent() {
         }}
       >
         {steps.map((step, index) => (
-          <Step>
+          <Step key={index}>
             <button className="ml-[-3px]" onClick={(e) => setActiveStep(index)}>
               <StepLabel
                 StepIconComponent={() => StepLabelIcon(step.imageName)}
