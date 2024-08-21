@@ -24,6 +24,9 @@ export function HeaderBar({ setMobileOpen }) {
         <Link to="/experiences">
           <NavLinkButton text={"Work Experiences"} />
         </Link>
+        <Link to="/stepper">
+          <NavLinkButton text={"Stepper"} />
+        </Link>
         <NavLinkButton text={"Contact"} />
       </div>
       <button
