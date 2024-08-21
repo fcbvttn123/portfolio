@@ -3,23 +3,26 @@ import Stepper from "@mui/material/Stepper"
 import Step from "@mui/material/Step"
 import StepLabel from "@mui/material/StepLabel"
 import { useState } from "react"
+import { StepContent, Typography } from "@mui/material"
 
 const steps = [
   {
-    label: "Technical Analyst",
+    label: "Technical Analyst - Intern",
     imageName: "first-intern-job-icon.png",
-    description: `For each ad campaign that you create, you can control how much you're willing to spend on clicks and conversions, which networks and geographical locations you want your ads to show on, and more.`,
+    company: "Ministry of Transportation",
+    period: "01/23 - 05/23",
   },
   {
-    label: "Support Technologist",
+    label: "Support Technologist - Intern",
     imageName: "sheridan.jpeg",
-    description:
-      "An ad group contains one or more ads which target a shared set of keywords.",
+    company: "Sheridan College",
+    period: "09/23 - 05/24",
   },
   {
-    label: "React Developer",
+    label: "React Developer - Intern",
     imageName: "sksq.jpeg",
-    description: `Try out different ad text to see what brings in the most customers, and learn how to enhance your ads using features like ad extensions. If you run into any problems with your ads, find out how to tell if they're running and how to resolve approval issues.`,
+    company: "SkillSquirrel",
+    period: "05/24 - 09/24",
   },
 ]
 
@@ -55,6 +58,16 @@ export function StepperComponent() {
           "& .MuiStepConnector-line": {
             minHeight: "60px",
           },
+          "& .css-14yr603-MuiStepContent-root": {
+            marginLeft: "15px",
+            paddingLeft: "35px",
+          },
+          "& .css-9l5vo-MuiCollapse-wrapperInner": {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "start",
+            color: "rgb(209, 213, 219)",
+          },
         }}
       >
         {steps.map((step, index) => (
@@ -65,6 +78,10 @@ export function StepperComponent() {
               >
                 {step.label}
               </StepLabel>
+              <StepContent>
+                <Typography>{step.company}</Typography>
+                <Typography>{step.period}</Typography>
+              </StepContent>
             </button>
           </Step>
         ))}
