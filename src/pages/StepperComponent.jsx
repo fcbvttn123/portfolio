@@ -35,7 +35,21 @@ export function StepperComponent() {
               className="cursor-pointer"
               onClick={(e) => setActiveStep(index)}
             >
-              <StepLabel>{step.label}</StepLabel>
+              <StepLabel
+                sx={{
+                  "& .Mui-disabled": {
+                    color: "rgba(209, 213, 219, .4)",
+                  },
+                  "& .Mui-completed": {
+                    color: "rgba(209, 213, 219, .4)",
+                  },
+                  "& .Mui-active": {
+                    color: "rgba(209, 213, 219, 1)",
+                  },
+                }}
+              >
+                {step.label}
+              </StepLabel>
             </button>
           </Step>
         ))}

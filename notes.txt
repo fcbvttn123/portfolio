@@ -20,15 +20,9 @@ Learnings:
 
     backdrop-filter: blur(5px);
 
-
-
-
 + RGBA Color --> alpha value
 
 	example: rgba(255, 255, 255, 0.05)
-
-
-
 
 + CSS: svg style 
 
@@ -36,6 +30,20 @@ Learnings:
   		font-size: 2.5em;
   		fill: #fff;
 	}
+
++ Syntax: & .Mui-completed
+
+    --> The symbol "&" represents the current component 
+
+    --> "& .Mui-completed" means the descendant named .Mui-completed of the current class 
+
++ Override style in MUI 
+
+    sx={{
+        "& .Mui-disabled": {
+            color: "rgba(209, 213, 219, .4)",
+        },
+    }}
 
 
 
