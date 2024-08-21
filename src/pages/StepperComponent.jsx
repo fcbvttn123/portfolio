@@ -36,11 +36,9 @@ export function StepperComponent() {
                   },
                   "& .Mui-completed": {
                     color: "rgba(209, 213, 219, .4)",
-                    cursor: "pointer",
                   },
                   "& .Mui-active": {
                     color: "rgba(209, 213, 219, 1)",
-                    cursor: "pointer",
                   },
                 }}
               >
