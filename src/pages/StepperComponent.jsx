@@ -2,10 +2,6 @@ import Box from "@mui/material/Box"
 import Stepper from "@mui/material/Stepper"
 import Step from "@mui/material/Step"
 import StepLabel from "@mui/material/StepLabel"
-import StepContent from "@mui/material/StepContent"
-import Button from "@mui/material/Button"
-import Paper from "@mui/material/Paper"
-import Typography from "@mui/material/Typography"
 import { useState } from "react"
 
 const steps = [
@@ -31,20 +27,20 @@ export function StepperComponent() {
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
-            <button
-              className="cursor-pointer"
-              onClick={(e) => setActiveStep(index)}
-            >
+            <button onClick={(e) => setActiveStep(index)}>
               <StepLabel
                 sx={{
                   "& .Mui-disabled": {
                     color: "rgba(209, 213, 219, .4)",
+                    cursor: "pointer",
                   },
                   "& .Mui-completed": {
                     color: "rgba(209, 213, 219, .4)",
+                    cursor: "pointer",
                   },
                   "& .Mui-active": {
                     color: "rgba(209, 213, 219, 1)",
+                    cursor: "pointer",
                   },
                 }}
               >
