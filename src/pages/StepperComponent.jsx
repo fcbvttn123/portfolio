@@ -20,6 +20,17 @@ const steps = [
   },
 ]
 
+function StepLabelIcon() {
+  return (
+    <div className="w-8 aspect-square rounded-full">
+      <img
+        src="./images/first-intern-job-icon.png"
+        className="w-full h-full rounded-full"
+      />
+    </div>
+  )
+}
+
 export function StepperComponent() {
   const [activeStep, setActiveStep] = useState(0)
   return (
@@ -27,7 +38,7 @@ export function StepperComponent() {
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
-            <button onClick={(e) => setActiveStep(index)}>
+            <button className="ml-[-3px]" onClick={(e) => setActiveStep(index)}>
               <StepLabel
                 sx={{
                   "& .Mui-disabled": {
@@ -38,9 +49,10 @@ export function StepperComponent() {
                     color: "rgba(209, 213, 219, .4)",
                   },
                   "& .Mui-active": {
-                    color: "rgba(209, 213, 219, 1)",
+                    color: "rgba(209, 213, 219, 1.0)",
                   },
                 }}
+                StepIconComponent={StepLabelIcon}
               >
                 {step.label}
               </StepLabel>
