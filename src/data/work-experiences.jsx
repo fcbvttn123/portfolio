@@ -1,10 +1,6 @@
-import { useState } from "react"
-import { StepperComponent } from "../components/StepperComponent"
-import { workExperiences } from "../data/work-experiences"
 import { MacScreen } from "../components/MacScreen"
-import { CarouselComponent } from "../components/CarouselComponent"
 
-const workExperiencesV2 = [
+export const workExperiencesV2 = [
   {
     label: "Technical Analyst - Intern",
     imageName: "first-intern-job-icon.png",
@@ -78,23 +74,3 @@ const workExperiencesV2 = [
     ),
   },
 ]
-
-export function StepperPage() {
-  const [activeStep, setActiveStep] = useState(0)
-  return (
-    <div className="flex justify-between items-start gap-x-32">
-      <StepperComponent
-        steps={workExperiences}
-        activeStep={activeStep}
-        setActiveStep={setActiveStep}
-      />
-      <div className="flex-1">
-        <CarouselComponent
-          steps={workExperiencesV2}
-          activeStep={activeStep}
-          setActiveStep={setActiveStep}
-        />
-      </div>
-    </div>
-  )
-}
