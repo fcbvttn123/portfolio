@@ -2,6 +2,7 @@ import { useState } from "react"
 import { StepperComponent } from "../components/StepperComponent"
 import { workExperiences } from "../data/work-experiences"
 import { MacScreen } from "../components/MacScreen"
+import { CarouselComponent } from "../components/CarouselComponent"
 
 export function StepperPage() {
   const [activeStep, setActiveStep] = useState(0)
@@ -12,7 +13,10 @@ export function StepperPage() {
         activeStep={activeStep}
         setActiveStep={setActiveStep}
       />
-      <MacScreen className="flex-1">
+      <div className="flex-1">
+        <CarouselComponent />
+      </div>
+      {/* <MacScreen className="flex-1">
         <p className="mb-4">Company: SkillSquirrel</p>
         <p className="mb-4">Period: 05/2024 - 09/2024</p>
         <p className="mb-4">What I've done:</p>
@@ -27,7 +31,7 @@ export function StepperPage() {
           <li>Working with various APIs and third-party tools.</li>
           <li>Applying plain JavaScript for website keyboard navigation.</li>
         </ul>
-      </MacScreen>
+      </MacScreen> */}
     </div>
   )
 }
