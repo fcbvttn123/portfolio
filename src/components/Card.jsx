@@ -8,17 +8,33 @@ export function Card() {
   return (
     <div>
       <div className="card-container">
-        {/* <button
-        data-text="Tech Stack"
-        style={{ "--r": "-15" }}
-        className="card-glass"
-        onClick={(e) => console.log("Tech Stack")}
-      ></button> */}
+        <button
+          data-text="Project Details"
+          style={{ "--r": "-15" }}
+          className="card-glass tech-stack"
+          onClick={(e) => console.log("Project Details")}
+        >
+          <FaReact className="text-2xl text-color" />
+          <FaNodeJs className="text-2xl text-color" />
+          <DiMongodb className="text-2xl text-color" />
+          <DiMysql className="text-2xl text-color" />
+          <FaReact className="text-2xl text-color" />
+          <FaNodeJs className="text-2xl text-color" />
+          <DiMongodb className="text-2xl text-color" />
+          <DiMysql className="text-2xl text-color" />
+          <FaReact className="text-2xl text-color" />
+          <FaNodeJs className="text-2xl text-color" />
+          <DiMongodb className="text-2xl text-color" />
+          <DiMysql className="text-2xl text-color" />
+          <FaReact className="text-2xl text-color" />
+          <FaNodeJs className="text-2xl text-color" />
+          <DiMongodb className="text-2xl text-color" />
+          <DiMysql className="text-2xl text-color" />
+        </button>
         <button
           data-text="GitHub"
-          // style={{ "--r": "5" }}
-          style={{ "--r": "-15" }}
-          className="card-glass"
+          style={{ "--r": "5" }}
+          className="card-glass flex items-center justify-center"
           onClick={(e) => console.log("GitHub")}
         >
           <FaGithub className="text-3xl" />
@@ -26,15 +42,12 @@ export function Card() {
         <button
           data-text="Demo"
           style={{ "--r": "25" }}
-          className="card-glass"
+          className="card-glass flex items-center justify-center"
           onClick={(e) => console.log("Demo")}
         ></button>
       </div>
-      <div className="mt-8 flex items-center justify-center gap-2">
-        <FaReact className="text-3xl text-color" />
-        <FaNodeJs className="text-3xl text-color" />
-        <DiMongodb className="text-3xl text-color" />
-        <DiMysql className="text-3xl text-color" />
+      <div className="text-color mt-8 flex items-center justify-center gap-2">
+        Project Name
       </div>
     </div>
   )
