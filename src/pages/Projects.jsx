@@ -1,5 +1,5 @@
-import { Grid } from "@material-ui/core"
 import { Card } from "../components/Card"
+import Grid from "@mui/material/Grid"
 
 export function Projects() {
   return (
