@@ -1,6 +1,6 @@
 import { MacScreen } from "../components/MacScreen"
 
-export const workExperiencesV2 = [
+export const workExperiences = [
   {
     label: "Technical Analyst - Intern",
     imageName: "first-intern-job-icon.png",
