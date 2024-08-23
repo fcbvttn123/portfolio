@@ -3,8 +3,8 @@ import { skills } from "../data/skills"
 export function Skills() {
   return (
     <section className="text-color">
-      {skills.map((topic) => (
-        <div className="row-span-full mb-8">
+      {skills.map((topic, index) => (
+        <div key={index} className="row-span-full mb-8">
           <h1 className="text-xl mb-4">{topic.topic}</h1>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {topic.list.map((item) => (
