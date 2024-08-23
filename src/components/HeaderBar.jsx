@@ -1,6 +1,6 @@
 import { Bars3Icon } from "@heroicons/react/24/outline"
 import { NavLinkButton } from "./NavLinkButton"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export function HeaderBar({ setMobileOpen }) {
   return (
@@ -15,16 +15,10 @@ export function HeaderBar({ setMobileOpen }) {
       </Link>
       <h2 className="text-color mr-auto ml-4">Software Developer</h2>
       <div className="text-color hidden md:flex md:items-center md:justify-between md:gap-x-8">
-        <Link to="/skills">
-          <NavLinkButton text={"Skills"} />
-        </Link>
-        <Link to="/projects">
-          <NavLinkButton text={"Projects"} />
-        </Link>
-        <Link to="/experiences">
-          <NavLinkButton text={"Work Experiences"} />
-        </Link>
-        <NavLinkButton text={"Contact"} />
+        <NavLinkButton path="/skills" text={"Skills"} />
+        <NavLinkButton path="/projects" text={"Projects"} />
+        <NavLinkButton path="/experiences" text={"Work Experiences"} />
+        <NavLinkButton path="/contact" text={"Contact"} />
       </div>
       <button
         className="relative top-2 hover:cursor-pointer md:hidden"

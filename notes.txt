@@ -50,6 +50,8 @@ Learnings:
 
 Todo List 
 
++ Add style when a navigation link button is focused 
+
 + Learn AutoPlaySwipeableViews component 
 
 + Implement mobile design for stepper 

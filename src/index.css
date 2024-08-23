@@ -70,6 +70,11 @@ li {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color));
 }
+.nav-link-button.isHovered .nav-link-button-hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+  text-decoration: underline;
+}
 
 /* Card Styling */
 .card-container {
