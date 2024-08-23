@@ -50,14 +50,8 @@ Learnings:
 
 Todo List 
 
-+ Add style when a navigation link button is focused 
-
-+ Learn AutoPlaySwipeableViews component 
-
 + Implement mobile design for stepper 
 
 + Make stepper more independent using children
 
 + Add one more mini-card for project details (tech stack) in each Card
-
-+ Bug: hover effect on Work Experience Nav Link Button 

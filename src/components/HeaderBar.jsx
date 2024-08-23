@@ -17,7 +17,7 @@ export function HeaderBar({ setMobileOpen }) {
       <div className="text-color hidden md:flex md:items-center md:justify-between md:gap-x-8">
         <NavLinkButton path="/skills" text={"Skills"} />
         <NavLinkButton path="/projects" text={"Projects"} />
-        <NavLinkButton path="/experiences" text={"Work Experiences"} />
+        <NavLinkButton path="/experiences" text={"Experiences"} />
         <NavLinkButton path="/contact" text={"Contact"} />
       </div>
       <button
