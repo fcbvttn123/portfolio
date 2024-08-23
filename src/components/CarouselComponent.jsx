@@ -1,12 +1,10 @@
-import { Box, Button, MobileStepper, Paper, Typography } from "@mui/material"
+import { Box, Button, MobileStepper } from "@mui/material"
 import { autoPlay } from "react-swipeable-views-utils"
 import SwipeableViews from "react-swipeable-views"
-import { useState } from "react"
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
 export function CarouselComponent({ steps, activeStep, setActiveStep }) {
-  // const [activeStep, setActiveStep] = useState(0)
   return (
     <Box className="text-color">
       <MobileStepper
@@ -42,7 +40,9 @@ export function CarouselComponent({ steps, activeStep, setActiveStep }) {
         onChangeIndex={(step) => setActiveStep(step)}
         enableMouseEvents
       >
-        {steps.map((step, index) => step.content)}
+        {steps.map((step, index) => (
+          <div key={index}>{step.content}</div>
+        ))}
       </AutoPlaySwipeableViews>
     </Box>
   )
