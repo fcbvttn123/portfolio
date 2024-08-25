@@ -55,3 +55,5 @@ Todo List
 + Make stepper more independent using children
 
 + Add one more mini-card for project details (tech stack) in each Card
+
++ Warning in the Experiences page: Using UNSAFE_componentWillReceiveProps in strict mode is not recommended and may indicate bugs in your code.

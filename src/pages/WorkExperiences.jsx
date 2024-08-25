@@ -7,11 +7,13 @@ export function WorkExperiences() {
   const [activeStep, setActiveStep] = useState(0)
   return (
     <div className="flex justify-between items-start gap-x-32">
-      <StepperComponent
-        steps={workExperiences}
-        activeStep={activeStep}
-        setActiveStep={setActiveStep}
-      />
+      <div className="hidden lg:block">
+        <StepperComponent
+          steps={workExperiences}
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+        />
+      </div>
       <div className="flex-1">
         <CarouselComponent
           steps={workExperiences}
