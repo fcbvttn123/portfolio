@@ -1,3 +1,4 @@
+import { Button, MobileStepper } from "@mui/material"
 import { useState, useEffect } from "react"
 
 export function SliderAutoplay({
@@ -17,7 +18,39 @@ export function SliderAutoplay({
     return () => clearInterval(slider)
   }, [activeStep])
   return (
-    <section className="w-full h-[450px] md:h-[350px] relative flex overflow-hidden">
+    <section className="w-full h-[450px] md:h-[350px] relative flex flex-col overflow-hidden">
+      <div className="lg:hidden">
+        <MobileStepper
+          variant="dots"
+          steps={arr.length}
+          position="static"
+          activeStep={activeStep}
+          nextButton={
+            <Button
+              size="small"
+              onClick={(e) =>
+                activeStep == arr.length - 1
+                  ? setActiveStep(0)
+                  : setActiveStep((prev) => prev + 1)
+              }
+            >
+              Next
+            </Button>
+          }
+          backButton={
+            <Button
+              size="small"
+              onClick={(e) =>
+                activeStep == 0
+                  ? setActiveStep(lastIndex)
+                  : setActiveStep((prev) => prev - 1)
+              }
+            >
+              Back
+            </Button>
+          }
+        />
+      </div>
       {arr.map((item, indexNumber) => {
         let position = "nextSlide"
         if (indexNumber === activeStep) {
@@ -32,7 +65,7 @@ export function SliderAutoplay({
         return (
           <article
             key={indexNumber}
-            className={`${position} slide absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-300 ease-linear`}
+            className={`${position} slide absolute top-10 lg:top-0 left-0 w-full h-full opacity-0 transition-all duration-300 ease-linear`}
           >
             {item.content}
           </article>
