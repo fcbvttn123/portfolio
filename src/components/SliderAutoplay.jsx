@@ -17,7 +17,7 @@ export function SliderAutoplay({
     return () => clearInterval(slider)
   }, [activeStep])
   return (
-    <section className="w-full h-[350px] relative flex overflow-hidden">
+    <section className="w-full h-[450px] md:h-[350px] relative flex overflow-hidden">
       {arr.map((item, indexNumber) => {
         let position = "nextSlide"
         if (indexNumber === activeStep) {
