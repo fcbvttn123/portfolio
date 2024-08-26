@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { StepperComponent } from "../components/StepperComponent"
-import { CarouselComponent } from "../components/CarouselComponent"
 import { workExperiences } from "../data/work-experiences.jsx"
+import { SliderAutoplay } from "../components/SliderAutoplay.jsx"
 
 export function WorkExperiences() {
   const [activeStep, setActiveStep] = useState(0)
@@ -15,10 +15,11 @@ export function WorkExperiences() {
         />
       </div>
       <div className="flex-1">
-        <CarouselComponent
+        <SliderAutoplay
           steps={workExperiences}
           activeStep={activeStep}
           setActiveStep={setActiveStep}
+          secondsSlideStaying={4}
         />
       </div>
     </div>

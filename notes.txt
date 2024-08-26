@@ -50,7 +50,7 @@ Learnings:
 
 Todo List 
 
-+ Implement mobile design for stepper 
++ Create new Slider component 
 
 + Make stepper more independent using children
 

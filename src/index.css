@@ -211,3 +211,15 @@ li {
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
 }
+
+/* Slider Autoplay */
+article.slide.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.slide.lastSlide {
+  transform: translateX(-100%);
+}
+article.slide.nextSlide {
+  transform: translateX(100%);
+}
