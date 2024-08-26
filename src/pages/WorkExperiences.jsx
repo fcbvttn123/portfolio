@@ -12,6 +12,7 @@ export function WorkExperiences() {
           steps={workExperiences}
           activeStep={activeStep}
           setActiveStep={setActiveStep}
+          stepLabelRounded={true}
         />
       </div>
       <div className="flex-1">

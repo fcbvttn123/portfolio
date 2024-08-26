@@ -1,6 +1,7 @@
 export const skills = [
   {
-    topic: "Programming Languages",
+    label: "Programming Languages",
+    imageName: "coding.png",
     list: [
       { text: "HTML", imageName: "html.png" },
       { text: "CSS", imageName: "css.png" },
@@ -16,7 +17,8 @@ export const skills = [
     ],
   },
   {
-    topic: "Frameworks",
+    label: "Frameworks",
+    imageName: "framework.png",
     list: [
       { text: "Tailwind CSS", imageName: "tailwindcss.jpeg" },
       { text: "React", imageName: "react.png" },
@@ -30,7 +32,8 @@ export const skills = [
     ],
   },
   {
-    topic: "Databases",
+    label: "Databases",
+    imageName: "server.png",
     list: [
       { text: "Firebase", imageName: "firebase.jpeg" },
       { text: "MySQL", imageName: "mysql.png" },

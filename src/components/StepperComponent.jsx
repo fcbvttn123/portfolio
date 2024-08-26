@@ -4,18 +4,27 @@ import Step from "@mui/material/Step"
 import StepLabel from "@mui/material/StepLabel"
 import { StepContent } from "@mui/material"
 
-export function StepLabelIcon(imageName) {
+export function StepLabelIcon(imageName, stepLabelRounded) {
+  console.log(stepLabelRounded)
   return (
-    <div className="w-8 aspect-square rounded-full">
+    <div className={`w-8 aspect-square ${stepLabelRounded && "rounded-full"}`}>
       <img
         src={`./images/${imageName}`}
-        className="w-full h-full rounded-full object-cover"
+        className={`w-full h-full object-cover ${
+          stepLabelRounded && "rounded-full"
+        }`}
       />
     </div>
   )
 }
 
-export function StepperComponent({ steps, activeStep, setActiveStep }) {
+export function StepperComponent({
+  steps,
+  activeStep,
+  setActiveStep,
+  showStepContent,
+  stepLabelRounded,
+}) {
   return (
     <Box sx={{ maxWidth: 400 }}>
       <Stepper
@@ -54,16 +63,20 @@ export function StepperComponent({ steps, activeStep, setActiveStep }) {
           <Step key={index}>
             <button className="ml-[-3px]" onClick={(e) => setActiveStep(index)}>
               <StepLabel
-                StepIconComponent={() => StepLabelIcon(step.imageName)}
+                StepIconComponent={() =>
+                  StepLabelIcon(step.imageName, stepLabelRounded)
+                }
               >
                 {step.label}
               </StepLabel>
-              <StepContent>
-                <ul className="pl-3">
-                  <li>{step?.company && step.company}</li>
-                  <li>{step?.period && step.period}</li>
-                </ul>
-              </StepContent>
+              {showStepContent && (
+                <StepContent>
+                  <ul className="pl-3">
+                    <li>{step?.company && step.company}</li>
+                    <li>{step?.period && step.period}</li>
+                  </ul>
+                </StepContent>
+              )}
             </button>
           </Step>
         ))}

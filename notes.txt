@@ -50,10 +50,6 @@ Learnings:
 
 Todo List 
 
-+ Create new Slider component 
-
-+ Make stepper more independent using children
++ Add company name, duration, position for Slider when it's in mobile screen
 
 + Add one more mini-card for project details (tech stack) in each Card
-
-+ Warning in the Experiences page: Using UNSAFE_componentWillReceiveProps in strict mode is not recommended and may indicate bugs in your code.
