@@ -122,7 +122,7 @@ export const workExperiencesMobileDesign = [
           </li>
           <li>
             Resolved inquiries regarding desktop and laptop computers, operating
-            systems, PC applications software and voice/data/video networks.
+            systems and voice/data/video networks.
           </li>
           <li>
             Working in IT Service Desk with troubleshooting knowledge of
