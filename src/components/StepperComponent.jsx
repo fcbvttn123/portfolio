@@ -23,12 +23,15 @@ export function StepperComponent({
   setActiveStep,
   showStepContent,
   stepLabelRounded,
+  orientation,
 }) {
   return (
-    <Box sx={{ maxWidth: 400 }}>
+    <Box
+      sx={orientation == "horizontal" ? { width: "100%" } : { maxWidth: 400 }}
+    >
       <Stepper
         activeStep={activeStep}
-        orientation="vertical"
+        orientation={orientation ? orientation : "vertical"}
         sx={{
           "& .Mui-disabled": {
             color: "rgba(209, 213, 219, .4)",
@@ -56,6 +59,9 @@ export function StepperComponent({
             alignItems: "start",
             color: "rgb(209, 213, 219)",
           },
+          "& .MuiStepConnector-line": {
+            minHeight: orientation == "horizontal" ? 0 : "60px",
+          },
         }}
       >
         {steps.map((step, index) => (
@@ -66,7 +72,10 @@ export function StepperComponent({
                   StepLabelIcon(step.imageName, stepLabelRounded)
                 }
               >
-                {step.label}
+                {step.label == "Programming Languages" &&
+                orientation == "horizontal"
+                  ? "Languages"
+                  : step.label}
               </StepLabel>
               {showStepContent && (
                 <StepContent>

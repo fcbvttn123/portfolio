@@ -1,25 +1,31 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { StepperComponent } from "../components/StepperComponent"
 import { skills } from "../data/skills"
 
 export function Skills() {
   const [activeStep, setActiveStep] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", handleResize)
+  }, [])
   return (
-    <section className="text-color flex justify-center lg:justify-between items-start gap-2">
-      <div className="hidden md:block">
-        <StepperComponent
-          steps={skills}
-          activeStep={activeStep}
-          setActiveStep={setActiveStep}
-          showStepContent={false}
-          stepLabelRounded={false}
-        />
-      </div>
+    <section className="text-color flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-x-2 gap-y-6">
+      <StepperComponent
+        steps={skills}
+        activeStep={activeStep}
+        setActiveStep={setActiveStep}
+        showStepContent={false}
+        stepLabelRounded={false}
+        orientation={windowWidth >= 768 ? "vertical" : "horizontal"}
+      />
       <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
         {skills[activeStep].list.map((item, index) => (
           <div
             key={item.text}
-            className="skill-card-glass w-28 max-w-48 lg:w-full aspect-square"
+            className="skill-card-glass w-full max-w-48 aspect-square"
             data-text={item.text}
           >
             <img
