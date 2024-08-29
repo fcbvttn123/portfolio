@@ -5,7 +5,6 @@ import StepLabel from "@mui/material/StepLabel"
 import { StepContent } from "@mui/material"
 
 export function StepLabelIcon(imageName, stepLabelRounded) {
-  console.log(stepLabelRounded)
   return (
     <div className={`w-8 aspect-square ${stepLabelRounded && "rounded-full"}`}>
       <img
