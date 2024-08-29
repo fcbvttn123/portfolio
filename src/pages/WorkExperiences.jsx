@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { StepperComponent } from "../components/StepperComponent"
-import { workExperiences } from "../data/work-experiences.jsx"
+import {
+  workExperiences,
+  workExperiencesMobileDesign,
+} from "../data/work-experiences.jsx"
 import { SliderAutoplay } from "../components/SliderAutoplay.jsx"
 
 export function WorkExperiences() {
