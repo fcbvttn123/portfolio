@@ -5,7 +5,7 @@ import { skills } from "../data/skills"
 export function Skills() {
   const [activeStep, setActiveStep] = useState(0)
   return (
-    <section className="text-color flex justify-center lg:justify-between items-start gap-x-24">
+    <section className="text-color flex justify-center lg:justify-between items-start gap-2">
       <div className="hidden md:block">
         <StepperComponent
           steps={skills}
@@ -23,7 +23,7 @@ export function Skills() {
             data-text={item.text}
           >
             <img
-              className="w-[50%] h-[50%] mt-2 md:mt-4 xl:mt-6 rounded-full"
+              className="w-[50%] h-[50%] mt-2 md:mt-2 lg:mt-6 rounded-full"
               src={`./images/${item.imageName}`}
             />
           </div>
