@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { StepperComponent } from "../components/StepperComponent"
 import {
   workExperiences,
@@ -8,6 +8,13 @@ import { SliderAutoplay } from "../components/SliderAutoplay.jsx"
 
 export function WorkExperiences() {
   const [activeStep, setActiveStep] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", handleResize)
+  }, [])
   return (
     <div className="flex justify-between items-start gap-x-32">
       <div className="hidden lg:block">
@@ -21,7 +28,9 @@ export function WorkExperiences() {
       </div>
       <div className="flex-1">
         <SliderAutoplay
-          steps={workExperiences}
+          steps={
+            windowWidth <= 1024 ? workExperiencesMobileDesign : workExperiences
+          }
           activeStep={activeStep}
           setActiveStep={setActiveStep}
           secondsSlideStaying={4}
