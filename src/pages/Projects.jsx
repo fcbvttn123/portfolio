@@ -1,5 +1,9 @@
-import { Card } from "../components/Card"
+import { ProjectCard } from "../components/ProjectCard"
 
 export function Projects() {
-  return <Card />
+  return (
+    <div>
+      <ProjectCard />
+    </div>
+  )
 }

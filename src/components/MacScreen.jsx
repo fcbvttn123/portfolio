@@ -8,7 +8,7 @@ export function MacScreen({ children, className }) {
         <div className="w-[9px] aspect-square rounded-full bg-yellow-600"></div>
         <div className="w-[9px] aspect-square rounded-full bg-green-700"></div>
       </div>
-      <code>{children}</code>
+      {children}
     </div>
   )
 }
