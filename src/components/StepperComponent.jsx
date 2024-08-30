@@ -44,7 +44,7 @@ export function StepperComponent({
             color: "rgba(209, 213, 219, 1)",
           },
           "& .MuiStepConnector-line": {
-            minHeight: "60px",
+            minHeight: orientation == "horizontal" ? 0 : "60px",
           },
           "& .css-14yr603-MuiStepContent-root": {
             marginLeft: "15px",
@@ -58,9 +58,6 @@ export function StepperComponent({
             flexDirection: "column",
             alignItems: "start",
             color: "rgb(209, 213, 219)",
-          },
-          "& .MuiStepConnector-line": {
-            minHeight: orientation == "horizontal" ? 0 : "60px",
           },
         }}
       >
