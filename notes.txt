@@ -52,8 +52,6 @@ Todo List
 
 + Mac Screen of Experience page: RWD value is hard-coded right now, need to fix it to adapt to different content
 
-+ Add one more mini-card for project details (tech stack) in each Card
-
 
 
 
