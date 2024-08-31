@@ -11,7 +11,6 @@ export const skills = [
       { text: "Java", imageName: "java.png" },
       { text: "Swift", imageName: "swift.png" },
       { text: "C#", imageName: "csharp.png" },
-      { text: "C", imageName: "c.png" },
       { text: "PHP", imageName: "php.png" },
       { text: "SQL", imageName: "sql.png" },
     ],
