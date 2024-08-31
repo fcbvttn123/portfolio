@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
+import emailjs from "@emailjs/browser"
 
 function FormInput({
   labelText,
@@ -31,6 +32,7 @@ function FormInput({
 }
 
 export function Contact() {
+  const form = useRef()
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -53,7 +55,18 @@ export function Contact() {
     e.preventDefault()
     formData.email == "" &&
       setFormError("Please fill in your email to get notifications")
-    console.log(formData)
+    emailjs
+      .sendForm("service_h1uzj6n", "template_wvdrfar", form.current, {
+        publicKey: "Ib5vsz-ErNLyuqwok",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!")
+        },
+        (error) => {
+          console.log("FAILED...", error.text)
+        }
+      )
     setFormData({
       firstName: "",
       lastName: "",
@@ -83,6 +96,7 @@ export function Contact() {
       <form
         onSubmit={handleFormSubmit}
         className="mt-10 md:mt-0 md:grid md:grid-cols-2 md:gap-x-6"
+        ref={form}
       >
         <FormInput
           labelText="First Name"
