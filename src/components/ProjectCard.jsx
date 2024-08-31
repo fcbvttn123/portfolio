@@ -25,7 +25,7 @@ export function ProjectCard() {
             <div className="bg-gray-900 rounded-xl px-4 py-3">
               <p className="text-lg font-extrabold mb-4">{item.project_name}</p>
               <div className="flex items-center gap-x-2 mt-2">
-                <a href="https://github.com/fcbvttn123" target="_blank">
+                <a href={item.github} target="_blank">
                   <FaGithub className="text-3xl cursor-pointer transition-all duration-500 hover:scale-110" />
                 </a>
                 <a href={item.url} target="_blank">

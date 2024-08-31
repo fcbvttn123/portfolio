@@ -11,6 +11,7 @@ export const projectsArr = [
       "Familiarity with Vite to build and bundle project for deployment",
     ],
     url: "https://splendid-khapse-2931da.netlify.app",
+    github: "https://github.com/fcbvttn123/react-blog-website",
     tech_stack: ["React", "Tailwind CSS", "Firebase", "Vite"],
   },
   {
@@ -23,6 +24,7 @@ export const projectsArr = [
       "Familiarity with Vite to build and bundle project for deployment",
     ],
     url: "https://glittery-heliotrope-9b740a.netlify.app",
+    github: "https://github.com/fcbvttn123/react-chat-app",
     tech_stack: ["React", "Bootstrap CSS", "Firebase"],
   },
   {
@@ -35,6 +37,7 @@ export const projectsArr = [
       "Managed project dependencies and package distribution using NPM",
     ],
     url: "https://playful-gingersnap-9bed2e.netlify.app",
+    github: "https://github.com/fcbvttn123/react-weather-app",
     tech_stack: ["React", "Plain CSS", "NPM", "Weather API"],
   },
   {
@@ -47,6 +50,7 @@ export const projectsArr = [
       "Integrate React and Vite to build the project",
     ],
     url: "https://beamish-longma-151a5d.netlify.app",
+    github: "https://github.com/fcbvttn123/tailwindcss-coffee-shop",
     tech_stack: ["HTML", "Plain CSS", "JavaScript"],
   },
   {
@@ -58,6 +62,7 @@ export const projectsArr = [
       "Using basic CSS to design the game",
     ],
     url: "https://chipper-heliotrope-92c1a4.netlify.app",
+    github: "https://github.com/fcbvttn123/js-minesweeper",
     tech_stack: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -70,6 +75,7 @@ export const projectsArr = [
       "Using Tailwind CSS for the Website Design and JavaScript for the Website functions",
     ],
     url: "https://keen-dodol-1ba301.netlify.app",
+    github: "https://github.com/fcbvttn123/js-shopping-cart",
     tech_stack: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -82,6 +88,7 @@ export const projectsArr = [
       "Utilize Tailwind CSS for responsive web design",
     ],
     url: "https://coruscating-fenglisu-02f914.netlify.app",
+    github: "https://github.com/fcbvttn123/react-quizzical-app",
     tech_stack: ["React", "Tailwind CSS"],
   },
   {
@@ -93,6 +100,7 @@ export const projectsArr = [
       "Utilize Vite and React to build and deploy the website",
     ],
     url: "https://bespoke-haupia-9f456a.netlify.app",
+    github: "https://github.com/fcbvttn123/tailwindcss-landing-page",
     tech_stack: ["HTML", "Tailwind CSS"],
   },
   {
@@ -105,6 +113,7 @@ export const projectsArr = [
       "The game can track the time a player need to win one game",
     ],
     url: "https://poetic-gnome-9d3141.netlify.app",
+    github: "https://github.com/fcbvttn123/react-tenzies",
     tech_stack: ["React", "Bootstrap CSS"],
   },
 ]
