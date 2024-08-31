@@ -10,6 +10,7 @@ function FormInput({
   inputName,
   inputValue,
   labelClassName,
+  placeholder,
 }) {
   return (
     <div className="flex flex-col gap-y-2 mb-3">
@@ -25,6 +26,7 @@ function FormInput({
         onChange={handleInputChange}
         name={inputName}
         value={inputValue}
+        placeholder={placeholder}
         className="bg-transparent px-2 py-3 border-[1px] hover:border-[2px] border-gray-300 lg:min-w-[300px]"
       />
     </div>
@@ -105,6 +107,7 @@ export function Contact() {
           inputName="firstName"
           inputValue={formData.firstName}
           handleInputChange={handleChange}
+          placeholder="Enter your first name..."
         />
         <FormInput
           labelText="Last Name"
@@ -113,6 +116,7 @@ export function Contact() {
           inputName="lastName"
           inputValue={formData.lastName}
           handleInputChange={handleChange}
+          placeholder="Enter your last name..."
         />
         <FormInput
           labelText="Email"
@@ -126,6 +130,7 @@ export function Contact() {
             formError == "Please fill in your email to get notifications" &&
             "text-red-600"
           }
+          placeholder="Enter your email..."
         />
         <FormInput
           labelText="Subject"
@@ -134,6 +139,7 @@ export function Contact() {
           inputName="subject"
           inputValue={formData.subject}
           handleInputChange={handleChange}
+          placeholder="Subject"
         />
         <div className="flex flex-col gap-y-2 mb-3">
           <label htmlFor="message" className="font-light text-lg">
@@ -146,6 +152,7 @@ export function Contact() {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            placeholder="Leave a message!"
           ></textarea>
         </div>
         <button
