@@ -65,9 +65,7 @@ export function Contact() {
           </div>
           <div>
             <h2 className="font-bold text-xl mb-1">Email</h2>
-            <a href="mailto:vutran@sheridancollege.ca">
-              vutran@sheridancollege.ca
-            </a>
+            <a href="mailto:vutran@sheridancollege.ca">fcbvttn@gmail.com</a>
           </div>
         </div>
         <form

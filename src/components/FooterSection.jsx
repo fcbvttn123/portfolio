@@ -10,7 +10,7 @@ export function FooterSection() {
       </div>
       <div className="my-4">
         <h1 className="font-bold text-xl mb-1">Email</h1>
-        <a href="mailto:vutran@sheridancollege.ca">vutran@sheridancollege.ca</a>
+        <a href="mailto:vutran@sheridancollege.ca">fcbvttn@gmail.com</a>
       </div>
       <div>
         <h1 className="font-bold text-xl mb-1">Follow me</h1>
