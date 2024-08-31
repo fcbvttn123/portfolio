@@ -50,6 +50,10 @@ Learnings:
 
 Todo List 
 
++ Add snackbar after sending contact form 
+
++ Update email as fcbvtnt@gmail.com for contact
+
 + Mac Screen of Experience page: RWD value is hard-coded right now, need to fix it to adapt to different content
 
 + Apply style to project card border when being hovered
