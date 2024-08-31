@@ -3,7 +3,7 @@ import { projectsArr } from "../data/projects"
 
 export function Projects() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-y-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-x-4 gap-y-10">
       {projectsArr.map((item) => (
         <ProjectCard
           projectImageName={item.img_name}
