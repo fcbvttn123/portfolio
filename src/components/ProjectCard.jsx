@@ -15,11 +15,11 @@ export function ProjectCard() {
                 backgroundImage: `url("./projects-images/${item.img_name}")`,
               }}
             ></div>
-            <div className="bg-gray-900 rounded-xl row-span-2 p-3 flex flex-wrap items-start gap-x-3">
+            <div className="bg-gray-900 rounded-xl row-span-2 p-3 flex flex-wrap items-start content-start gap-3">
               {item.tech_stack.map((techName) => (
-                <div className="border-2 border-gray-300 rounded-2xl px-2 py-1">
+                <p className="border-2 border-gray-300 rounded-2xl px-2 py-1 bg-[#fff2]">
                   {techName}
-                </div>
+                </p>
               ))}
             </div>
             <div className="bg-gray-900 rounded-xl px-4 py-3">
