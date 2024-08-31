@@ -1,9 +1,6 @@
 import { useRef, useState } from "react"
-import * as React from "react"
 import emailjs from "@emailjs/browser"
-import { Button, Snackbar } from "@mui/material"
-import IconButton from "@mui/material/IconButton"
-import { IoMdClose } from "react-icons/io"
+import { SnackbarComponent } from "../components/SnackbarComponent"
 
 function FormInput({
   labelText,
@@ -83,23 +80,6 @@ export function Contact() {
         }
       )
   }
-  const snackbarAction = (
-    <React.Fragment>
-      <IconButton
-        size="small"
-        aria-label="close"
-        color="inherit"
-        onClick={(event, reason) => {
-          if (reason === "clickaway") {
-            return
-          }
-          setSnackbarOpened(false)
-        }}
-      >
-        <IoMdClose />
-      </IconButton>
-    </React.Fragment>
-  )
   return (
     <>
       <section className="text-color md:flex md:justify-between">
@@ -192,23 +172,13 @@ export function Contact() {
           )}
         </form>
       </section>
-      <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={snackbarOpened}
-        autoHideDuration={3000}
-        onClose={(event, reason) => {
-          if (reason === "clickaway") {
-            return
-          }
-          setSnackbarOpened(false)
-        }}
-        message="Email sent!"
-        action={snackbarAction}
-        sx={{
-          "& .MuiSnackbarContent-root": {
-            backgroundColor: "rgb(22 163 74)",
-          },
-        }}
+      <SnackbarComponent
+        vertical="top"
+        horizontal="center"
+        snackbarOpened={snackbarOpened}
+        setSnackbarOpened={setSnackbarOpened}
+        autoHideDuration={2000}
+        message="Email Sent"
       />
     </>
   )
