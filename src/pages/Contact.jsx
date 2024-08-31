@@ -7,7 +7,7 @@ function FormInput({ labelText, inputType, inputId, required }) {
       <input
         id={inputId}
         type={inputType}
-        className="bg-transparent px-2 py-3 border-[1px] hover:border-[2px] border-gray-300"
+        className="bg-transparent px-2 py-3 border-[1px] hover:border-[2px] border-gray-300 lg:min-w-[300px]"
       />
     </div>
   )
@@ -15,20 +15,24 @@ function FormInput({ labelText, inputType, inputId, required }) {
 
 export function Contact() {
   return (
-    <section className="text-color">
+    <section className="text-color md:flex md:justify-between">
       <div>
-        <h1 className="font-bold text-3xl mb-1">Contact</h1>
-        <p>Looking forward to hearing from you</p>
+        <div>
+          <h1 className="font-bold text-3xl mb-1">Contact</h1>
+          <p>Looking forward to hearing from you</p>
+        </div>
+        <div className="my-6">
+          <h2 className="font-bold text-xl mb-1">Phone</h2>
+          <a href="tel:+14372136600">437-213-6600</a>
+        </div>
+        <div>
+          <h2 className="font-bold text-xl mb-1">Email</h2>
+          <a href="mailto:vutran@sheridancollege.ca">
+            vutran@sheridancollege.ca
+          </a>
+        </div>
       </div>
-      <div className="my-6">
-        <h2 className="font-bold text-xl mb-1">Phone</h2>
-        <a href="tel:+14372136600">437-213-6600</a>
-      </div>
-      <div>
-        <h2 className="font-bold text-xl mb-1">Email</h2>
-        <a href="mailto:vutran@sheridancollege.ca">vutran@sheridancollege.ca</a>
-      </div>
-      <form className="mt-10">
+      <form className="mt-10 md:mt-0 md:grid md:grid-cols-2 md:gap-x-6">
         <FormInput
           labelText="First Name"
           inputType="text"
@@ -54,7 +58,7 @@ export function Contact() {
         </div>
         <button
           type="submit"
-          className="mt-5 w-32 h-32 rounded-full border-gray-300 border-4 font-extrabold hover:bg-gray-300 hover:text-gray-900 transition-all duration-300"
+          className="relative mt-5 w-32 h-32 rounded-full border-gray-300 border-4 font-extrabold hover:bg-gray-300 hover:text-gray-900 transition-all duration-300 md:top-6"
         >
           Submit
         </button>
