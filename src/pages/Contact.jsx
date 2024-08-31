@@ -26,8 +26,10 @@ export function Contact() {
   }
   function handleFormSubmit(e) {
     e.preventDefault()
-    formData.email == "" &&
+    if (formData.email == "") {
       setFormError("Please fill in your email to get notifications")
+      return
+    }
     emailjs
       .sendForm("service_h1uzj6n", "template_wvdrfar", form.current, {
         publicKey: "Ib5vsz-ErNLyuqwok",
