@@ -5,7 +5,7 @@ import { projectsArr } from "../data/projects"
 
 export function ProjectCard() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-y-10">
       {projectsArr.map((item) => (
         <MacScreen className="max-w-[530px] w-full cursor-pointer transition-all duration-500 hover:scale-105">
           <div className="grid grid-cols-2 grid-rows-2 gap-3 mt-5">
