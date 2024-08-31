@@ -9,62 +9,19 @@ export function ProjectCard() {
       {projectsArr.map((item) => (
         <MacScreen className="max-w-[530px] w-full cursor-pointer transition-all duration-500 hover:scale-105">
           <div className="grid grid-cols-2 grid-rows-2 gap-3 mt-5">
-            <div className="bg-gray-900 rounded-xl p-3 flex flex-wrap gap-x-2 justify-between">
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-              <img
-                src="./images/react-blw.png"
-                className="w-7 h-7 object-cover"
-              />
-            </div>
             <div
-              className="bg-gray-900 rounded-xl row-span-2 p-3 overflow-hidden bg-cover bg-center"
+              className="bg-gray-900 rounded-xl flex flex-wrap gap-x-2 justify-between overflow-hidden bg-cover bg-center"
               style={{
                 backgroundImage: `url("./projects-images/${item.img_name}")`,
               }}
             ></div>
+            <div className="bg-gray-900 rounded-xl row-span-2 p-3 flex flex-wrap items-start gap-x-3">
+              {item.tech_stack.map((techName) => (
+                <div className="border-2 border-gray-300 rounded-2xl px-2 py-1">
+                  {techName}
+                </div>
+              ))}
+            </div>
             <div className="bg-gray-900 rounded-xl px-4 py-3">
               <p className="text-lg font-extrabold mb-4">{item.project_name}</p>
               <div className="flex items-center gap-x-2 mt-2">

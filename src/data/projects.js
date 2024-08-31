@@ -11,6 +11,7 @@ export const projectsArr = [
       "Familiarity with Vite to build and bundle project for deployment",
     ],
     url: "https://splendid-khapse-2931da.netlify.app",
+    tech_stack: ["React", "Tailwind CSS", "Firebase", "Vite"],
   },
   {
     img_name: "chat-app.png",
@@ -22,6 +23,7 @@ export const projectsArr = [
       "Familiarity with Vite to build and bundle project for deployment",
     ],
     url: "https://glittery-heliotrope-9b740a.netlify.app",
+    tech_stack: ["React", "Bootstrap CSS", "Firebase"],
   },
   {
     img_name: "weather-app.png",
@@ -33,6 +35,7 @@ export const projectsArr = [
       "Managed project dependencies and package distribution using NPM",
     ],
     url: "https://playful-gingersnap-9bed2e.netlify.app",
+    tech_stack: ["React", "Plain CSS", "NPM", "Weather API"],
   },
   {
     img_name: "landing-page-coffee-shop.png",
@@ -44,6 +47,7 @@ export const projectsArr = [
       "Integrate React and Vite to build the project",
     ],
     url: "https://beamish-longma-151a5d.netlify.app",
+    tech_stack: ["HTML", "Plain CSS", "JavaScript"],
   },
   {
     img_name: "minesweeper.png",
@@ -54,6 +58,7 @@ export const projectsArr = [
       "Using basic CSS to design the game",
     ],
     url: "https://chipper-heliotrope-92c1a4.netlify.app",
+    tech_stack: ["HTML", "CSS", "JavaScript"],
   },
   {
     img_name: "shopping-cart.png",
@@ -65,6 +70,7 @@ export const projectsArr = [
       "Using Tailwind CSS for the Website Design and JavaScript for the Website functions",
     ],
     url: "https://keen-dodol-1ba301.netlify.app",
+    tech_stack: ["HTML", "CSS", "JavaScript"],
   },
   {
     img_name: "quizz-app.png",
@@ -76,6 +82,7 @@ export const projectsArr = [
       "Utilize Tailwind CSS for responsive web design",
     ],
     url: "https://coruscating-fenglisu-02f914.netlify.app",
+    tech_stack: ["React", "Tailwind CSS"],
   },
   {
     img_name: "landing-page-scrimba.png",
@@ -86,6 +93,7 @@ export const projectsArr = [
       "Utilize Vite and React to build and deploy the website",
     ],
     url: "https://bespoke-haupia-9f456a.netlify.app",
+    tech_stack: ["HTML", "Tailwind CSS"],
   },
   {
     img_name: "tenzies.png",
@@ -97,5 +105,6 @@ export const projectsArr = [
       "The game can track the time a player need to win one game",
     ],
     url: "https://poetic-gnome-9d3141.netlify.app",
+    tech_stack: ["React", "Bootstrap CSS"],
   },
 ]
