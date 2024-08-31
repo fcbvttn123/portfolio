@@ -5,9 +5,9 @@ import { projectsArr } from "../data/projects"
 
 export function ProjectCard() {
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6">
       {projectsArr.map((item) => (
-        <MacScreen className="w-full cursor-pointer transition-all duration-500 hover:scale-105">
+        <MacScreen className="max-w-[530px] w-full cursor-pointer transition-all duration-500 hover:scale-105">
           <div className="grid grid-cols-2 grid-rows-2 gap-3 mt-5">
             <div className="bg-gray-900 rounded-xl p-3 flex flex-wrap gap-x-2 justify-between">
               <img
