@@ -20,7 +20,10 @@ export function ProjectCard({
         ></div>
         <div className="bg-gray-900 rounded-xl row-span-2 p-3 flex flex-wrap items-start content-start gap-3">
           {techStack.map((techName) => (
-            <p className="border-2 border-gray-300 rounded-2xl px-2 py-1 bg-[#fff2]">
+            <p
+              key={techName}
+              className="border-2 border-gray-300 rounded-2xl px-2 py-1 bg-[#fff2]"
+            >
               {techName}
             </p>
           ))}

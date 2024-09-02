@@ -1,15 +1,12 @@
 import { Bars3Icon } from "@heroicons/react/24/outline"
 import { NavLinkButton } from "./NavLinkButton"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export function HeaderBar({ setMobileOpen }) {
   return (
     <header className="flex items-end justify-between mb-10 lg:mb-24">
       <Link to={"/"}>
-        <button
-          className="font-extrabold text-2xl hover:cursor-pointer fancy-text-style text-transparent"
-          onClick={(e) => console.log("home page")}
-        >
+        <button className="font-extrabold text-2xl hover:cursor-pointer fancy-text-style text-transparent">
           David Vu
         </button>
       </Link>

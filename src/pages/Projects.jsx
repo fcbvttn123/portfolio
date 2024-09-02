@@ -6,6 +6,7 @@ export function Projects() {
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-x-4 gap-y-10">
       {projectsArr.map((item) => (
         <ProjectCard
+          key={item.img_name}
           projectImageName={item.img_name}
           techStack={item.tech_stack}
           projectName={item.project_name}
