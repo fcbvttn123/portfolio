@@ -50,6 +50,9 @@ export function StepperComponent({
             marginLeft: "15px",
             paddingLeft: "35px",
           },
+          "& .css-d0mviz": {
+            marginLeft: "15px",
+          },
           "& .MuiStepContent-last ul": {
             paddingLeft: "30px",
           },
