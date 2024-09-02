@@ -14,7 +14,8 @@ export function SliderAutoplay({
     activeStep > lastIndex && setActiveStep(0)
     let slider = setInterval(() => {
       setActiveStep(activeStep + 1)
-    }, secondsSlideStaying * 1000)
+      // }, secondsSlideStaying * 1000)
+    }, secondsSlideStaying * 100000000)
     return () => clearInterval(slider)
   }, [activeStep])
   return (
