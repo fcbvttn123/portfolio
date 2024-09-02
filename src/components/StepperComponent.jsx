@@ -79,7 +79,7 @@ export function StepperComponent({
               </StepLabel>
               {showStepContent && (
                 <StepContent>
-                  <ul className="pl-3">
+                  <ul className="pl-3 text-color">
                     <li>{step?.company && step.company}</li>
                     <li>{step?.period && step.period}</li>
                   </ul>
