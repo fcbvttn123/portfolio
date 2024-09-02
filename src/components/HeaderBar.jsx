@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export function HeaderBar({ setMobileOpen }) {
   return (
-    <header className="flex items-end justify-between mb-10 lg:mb-24">
+    <header className="flex items-end justify-between">
       <Link to={"/"}>
         <button className="font-extrabold text-2xl hover:cursor-pointer fancy-text-style text-transparent">
           David Vu

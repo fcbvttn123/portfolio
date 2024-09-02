@@ -7,7 +7,7 @@ import { FooterSection } from "./FooterSection"
 export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false)
   return (
-    <div className="py-3 px-4 md:px-10 lg:max-w-5xl xl:max-w-[1400px] lg:mx-auto">
+    <div className="h-full flex gap-y-14 flex-col justify-between py-3 px-4 md:px-10 lg:max-w-5xl xl:max-w-[1400px] lg:mx-auto">
       <HeaderBar setMobileOpen={setMobileOpen} />
       <MobileMenu opened={mobileOpen} setMobileOpen={setMobileOpen} />
       <Outlet />

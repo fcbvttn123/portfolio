@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa"
 
 export function FooterSection() {
   return (
-    <footer className="text-color mt-14 pt-7 -mx-4 px-4 border-t-2 border-gray-300 md:flex md:items-center md:justify-between lg:mt-24">
+    <footer className="text-color pt-7 -mx-4 px-4 border-t-2 border-gray-300 md:flex md:items-center md:justify-between">
       <div>
         <h1 className="font-bold text-xl mb-1">Phone</h1>
         <a href="tel:+14372136600">437-213-6600</a>
