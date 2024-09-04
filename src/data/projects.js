@@ -3,11 +3,9 @@ export const projectsArr = [
     img_name: "blog.png",
     project_name: "Blog Website",
     project_desc: [
-      "Developed a blog website using React JS",
-      "Users can add, delete and read (as guests) blogs",
+      "Developed a blog website using React",
       "Implemented responsive and intuitive user interfaces using HTML and Tailwind CSS",
-      "Using Google Firebase - Firestore as database for blog storage",
-      "Using Google Firebase - Authentication for google account login",
+      "Using Google Firebase for Database and Authentication",
       "Familiarity with Vite to build and bundle project for deployment",
     ],
     url: "https://splendid-khapse-2931da.netlify.app",
