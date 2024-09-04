@@ -14,14 +14,14 @@ export function Projects() {
             className="flex items-stretch justify-between gap-x-[20px] mb-[100px]"
           >
             <div className="max-w-[500px]">
-              <div className="flex items-center gap-x-4">
-                <h2 className="text-2xl mb-4">{project.project_name}</h2>
-                <div>
+              <div className="flex items-center gap-x-4 mb-4">
+                <h2 className="text-2xl">{project.project_name}</h2>
+                <div className="flex items-center gap-x-2">
                   <a href={project.github} target="_blank">
-                    <FaGithub />
+                    <FaGithub className="text-xl" />
                   </a>
                   <a href={project.url} target="_blank">
-                    <IoGlobeSharp />
+                    <IoGlobeSharp className="text-xl" />
                   </a>
                 </div>
               </div>
