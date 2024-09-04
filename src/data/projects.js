@@ -105,7 +105,7 @@ export const projectsArr = [
   },
   {
     img_name: "landing-page-scrimba.png",
-    project_name: "Landing Page",
+    project_name: "Landing Page (Tailwind CSS Tutorial)",
     project_desc: [
       "The website is a result from completing the Tailwind CSS tutorial on the Internet",
       "Responsive Web Design",
