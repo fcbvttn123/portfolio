@@ -11,6 +11,8 @@ export const projectsArr = [
     url: "https://splendid-khapse-2931da.netlify.app",
     github: "https://github.com/fcbvttn123/react-blog-website",
     tech_stack: ["React", "Tailwind CSS", "Firebase", "Vite"],
+    project_summary:
+      "Blog Website is built with React and Tailwind CSS as frontend technology for a clean and intuitive design. Firebase is used for both the database and authentication, providing secure and reliable data management. Finally, the project is bundled and deployed using Vite.",
   },
   {
     img_name: "chat-app.png",
@@ -24,6 +26,8 @@ export const projectsArr = [
     url: "https://glittery-heliotrope-9b740a.netlify.app",
     github: "https://github.com/fcbvttn123/react-chat-app",
     tech_stack: ["React", "Bootstrap CSS", "Firebase"],
+    project_summary:
+      "This project showcases a real-time chat application built with React. Firebase is utilized as the backend database, handling all message storage and retrieval efficiently.",
   },
   {
     img_name: "weather-app.png",
@@ -37,6 +41,8 @@ export const projectsArr = [
     url: "https://playful-gingersnap-9bed2e.netlify.app",
     github: "https://github.com/fcbvttn123/react-weather-app",
     tech_stack: ["React", "Plain CSS", "NPM", "Weather API"],
+    project_summary:
+      "The app features real-time data on current weather, air quality, and forecasts for the day and week ahead thanks to the third-party API: Open Weather Map. Project dependencies are managed with NPM, highlighting a streamlined and efficient development process.",
   },
   {
     img_name: "landing-page-coffee-shop.png",
@@ -50,6 +56,8 @@ export const projectsArr = [
     url: "https://beamish-longma-151a5d.netlify.app",
     github: "https://github.com/fcbvttn123/tailwindcss-coffee-shop",
     tech_stack: ["HTML", "Plain CSS", "JavaScript"],
+    project_summary:
+      "This project features a landing page for a coffee shop, designed to capture the essence of a modern, vibrant online presence. The website is created using HTML and Tailwind CSS, focusing on a clean and inviting layout that enhances user engagement.",
   },
   {
     img_name: "minesweeper.png",
@@ -62,6 +70,8 @@ export const projectsArr = [
     url: "https://chipper-heliotrope-92c1a4.netlify.app",
     github: "https://github.com/fcbvttn123/js-minesweeper",
     tech_stack: ["HTML", "CSS", "JavaScript"],
+    project_summary:
+      "This project is a digital rendition of the classic Minesweeper game, created to enhance JavaScript skills and understanding of game development. The game includes all fundamental features such as tile marking, mine setup, and automatic expansion of empty tiles, delivering the authentic Minesweeper experience.",
   },
   {
     img_name: "shopping-cart.png",
@@ -75,6 +85,8 @@ export const projectsArr = [
     url: "https://keen-dodol-1ba301.netlify.app",
     github: "https://github.com/fcbvttn123/js-shopping-cart",
     tech_stack: ["HTML", "CSS", "JavaScript"],
+    project_summary:
+      "Creating a fully functional shopping cart web application, designed to provide a seamless and responsive shopping experience. Users can effortlessly add, update, and delete products from their shopping cart, with all changes persisting across multiple tabs.",
   },
   {
     img_name: "quizz-app.png",
@@ -88,6 +100,8 @@ export const projectsArr = [
     url: "https://coruscating-fenglisu-02f914.netlify.app",
     github: "https://github.com/fcbvttn123/react-quizzical-app",
     tech_stack: ["React", "Tailwind CSS"],
+    project_summary:
+      "The Quiz App project is a fun and interactive application designed to test users' knowledge of music. This is the first project I built using React and it's mainly used to improve my React skills.",
   },
   {
     img_name: "landing-page-scrimba.png",
@@ -100,6 +114,8 @@ export const projectsArr = [
     url: "https://bespoke-haupia-9f456a.netlify.app",
     github: "https://github.com/fcbvttn123/tailwindcss-landing-page",
     tech_stack: ["HTML", "Tailwind CSS"],
+    project_summary:
+      "This project represents a landing page designed and developed as part of a Tailwind CSS tutorial, showcasing the application of best practices in responsive web design.",
   },
   {
     img_name: "tenzies.png",
@@ -113,5 +129,7 @@ export const projectsArr = [
     url: "https://poetic-gnome-9d3141.netlify.app",
     github: "https://github.com/fcbvttn123/react-tenzies",
     tech_stack: ["React", "Bootstrap CSS"],
+    project_summary:
+      "This project is a digital version of the popular Tenzies game, developed using React and Vite. The game features a simple yet engaging interface where players can roll dice and attempt to match all numbers to win.",
   },
 ]
