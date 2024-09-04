@@ -1,10 +1,12 @@
 import { projectsArr } from "../data/projects"
+import { FaGithub } from "react-icons/fa"
+import { IoGlobeSharp } from "react-icons/io5"
 
 export function Projects() {
   return (
     // <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-x-4 gap-y-10">
     <div className="text-color">
-      <h1 className="mb-[60px] mt-[50px] text-4xl font-bold">Projects</h1>
+      <h1 className="mb-[60px] text-4xl font-bold">Projects</h1>
       <div>
         {projectsArr.map((project) => (
           <div
@@ -12,7 +14,17 @@ export function Projects() {
             className="flex items-stretch justify-between gap-x-[20px] mb-[100px]"
           >
             <div className="max-w-[500px]">
-              <h2 className="text-2xl mb-4">{project.project_name}</h2>
+              <div className="flex items-center gap-x-4">
+                <h2 className="text-2xl mb-4">{project.project_name}</h2>
+                <div>
+                  <a href={project.github} target="_blank">
+                    <FaGithub />
+                  </a>
+                  <a href={project.url} target="_blank">
+                    <IoGlobeSharp />
+                  </a>
+                </div>
+              </div>
               <p>{project.project_summary}</p>
               <div className="flex items-center gap-x-4 mt-4">
                 {project.tech_stack.map((tech) => (
