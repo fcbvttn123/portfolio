@@ -11,6 +11,11 @@
   filter: drop-shadow(0 0 23px rgb(209 213 219));
 }
 
+.drop-shadow-green {
+  -webkit-text-stroke: 1px rgb(153 246 228);
+  filter: drop-shadow(0 0 23px rgb(153 246 228));
+}
+
 ul {
   list-style-type: disc;
   padding-left: 40px;

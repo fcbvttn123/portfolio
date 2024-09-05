@@ -1,6 +1,4 @@
 import { projectsArr } from "../data/projects"
-import { FaGithub } from "react-icons/fa"
-import { IoGlobeSharp } from "react-icons/io5"
 import { ProjectCard } from "../components/ProjectCard"
 
 export function Projects() {
