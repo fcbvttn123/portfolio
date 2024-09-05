@@ -14,11 +14,11 @@ export function ProjectCard({
   return (
     <div
       key={project_name}
-      className="flex flex-col md:flex-row md:items-stretch md:justify-around gap-y-[20px] gap-x-[20px] mb-[100px] sm:pl-[50px] md:pl-0"
+      className="project-card flex flex-col min-[925px]:flex-row md:items-stretch md:justify-around gap-y-[20px] gap-x-[20px] mb-[100px] sm:pl-[50px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="max-w-[500px]">
+      <div className="max-w-[500px] bg-gray-900 z-10">
         <div className="flex items-center gap-x-4 mb-4">
           <h2
             className={`text-2xl transition-all duration-500 fancy-text-style ${

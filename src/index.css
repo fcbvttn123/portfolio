@@ -81,6 +81,44 @@ li {
   text-decoration: underline;
 }
 
+/* Project Card Style */
+.project-card {
+  background-color: rgb(17 24 39);
+  position: relative;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 0;
+  height: 2px;
+  background-color: rgb(209 213 219);
+  z-index: 1;
+}
+.project-card:hover:before {
+  background-color: rgb(153 246 228);
+}
+@media (min-width: 600px) {
+  .project-card::before {
+    width: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .project-card::before {
+    width: 40px;
+  }
+}
+@media (min-width: 1280px) {
+  .project-card::before {
+    width: 100px;
+  }
+}
+@media (min-width: 1500px) {
+  .project-card::before {
+    width: 125px;
+  }
+}
+
 /* Card Styling */
 .card-container {
   position: relative;
