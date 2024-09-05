@@ -14,7 +14,7 @@ export function ProjectCard({
   return (
     <div
       key={project_name}
-      className="flex items-stretch justify-around gap-x-[20px] mb-[100px]"
+      className="flex flex-col md:flex-row md:items-stretch md:justify-around gap-y-[20px] gap-x-[20px] mb-[100px] sm:pl-[50px] md:pl-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -63,7 +63,7 @@ export function ProjectCard({
       <img
         src={`./projects-images/${img_name}`}
         className={`w-[400px] object-cover transition-all duration-500 ${
-          isHovered && "scale-150"
+          isHovered && "scale-110 xl:scale-150"
         }`}
       />
     </div>
