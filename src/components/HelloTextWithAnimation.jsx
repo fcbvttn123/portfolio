@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 const textArray = [
   "Hello! I'm David Vu",
-  "I'm a Developer",
+  "I'm a Web Developer",
   "I'm a Footballer",
   "Nice to meet you!",
 ]

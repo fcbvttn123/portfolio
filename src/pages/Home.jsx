@@ -11,9 +11,9 @@ export function Home() {
           A Bit About Me
         </h2>
         <p className="tracking-widest leading-6">
-          I'm a passionate software developer specializing in creating dynamic
-          and responsive web applications. Explore my portfolio to see how I
-          turn ideas into impactful digital experiences.
+          I'm a full stack developer specializing in creating dynamic and
+          responsive web applications. Explore my portfolio to see how I turn
+          ideas into impactful digital experiences.
         </p>
         <div className="mt-4 lg:mt-6 flex items-center justify-between md:justify-start gap-x-2 lg:gap-x-4">
           <Link to="/skills">
