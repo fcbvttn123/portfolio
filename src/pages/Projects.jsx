@@ -10,6 +10,7 @@ export function Projects() {
           <ProjectCard
             key={project.project_name}
             project_name={project.project_name}
+            project_type={project.project_type}
             github={project.github}
             url={project.url}
             project_summary={project.project_summary}

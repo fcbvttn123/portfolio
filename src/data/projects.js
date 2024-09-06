@@ -2,6 +2,7 @@ export const projectsArr = [
   {
     img_name: "blog.png",
     project_name: "Blog Website",
+    project_type: "Full Stack Web App",
     project_desc: [
       "Developed a blog website using React",
       "Implemented responsive and intuitive user interfaces using HTML and Tailwind CSS",
@@ -17,6 +18,7 @@ export const projectsArr = [
   {
     img_name: "chat-app.png",
     project_name: "Chat App",
+    project_type: "Full Stack Web App",
     project_desc: [
       "Developed a real-time chat application using React JS",
       "Implemented responsive and intuitive user interfaces using HTML and Tailwind CSS",
@@ -32,6 +34,7 @@ export const projectsArr = [
   {
     img_name: "weather-app.png",
     project_name: "Weather App",
+    project_type: "Frontend Web App",
     project_desc: [
       "Developed a modern and responsive Weather App using React JS, Vite",
       "Using Tailwind CSS and Mobile First Approach to provide an intuitive user interface across various devices",
@@ -47,6 +50,7 @@ export const projectsArr = [
   {
     img_name: "landing-page-coffee-shop.png",
     project_name: "Landing Page",
+    project_type: "Frontend Web App",
     project_desc: [
       "Using HTML and Tailwind CSS to design the website",
       "Utilize CSS Animation for friendly UI",
@@ -62,6 +66,7 @@ export const projectsArr = [
   {
     img_name: "minesweeper.png",
     project_name: "Minesweeper",
+    project_type: "JavaScript Project",
     project_desc: [
       "Building the basic Minesweeper game on purpose of improving JavaScript skill",
       "The game has enough basic functions such as: marking tile, mine setup, empty tile expansion,...",
@@ -76,6 +81,7 @@ export const projectsArr = [
   {
     img_name: "shopping-cart.png",
     project_name: "Shopping Cart",
+    project_type: "Frontend Web App",
     project_desc: [
       "Developed a Shopping Cart website which is responsive across multiple screens",
       "Users can add, delete, update products into their shopping cart",
@@ -91,6 +97,7 @@ export const projectsArr = [
   {
     img_name: "quizz-app.png",
     project_name: "Quiz App",
+    project_type: "React App",
     project_desc: [
       "Building a simple Quiz App with questions about music",
       "User can random questions and click submit to check their answers",
@@ -106,6 +113,7 @@ export const projectsArr = [
   {
     img_name: "landing-page-scrimba.png",
     project_name: "Landing Page (Tailwind CSS Tutorial)",
+    project_type: "Frontend Web App",
     project_desc: [
       "The website is a result from completing the Tailwind CSS tutorial on the Internet",
       "Responsive Web Design",
@@ -120,6 +128,7 @@ export const projectsArr = [
   {
     img_name: "tenzies.png",
     project_name: "Tenzies",
+    project_type: "React App",
     project_desc: [
       "Apply Vite and React to build a basic tenzies game",
       "The game keeps track of the number of games played",

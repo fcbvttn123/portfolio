@@ -4,6 +4,7 @@ import { IoGlobeSharp } from "react-icons/io5"
 
 export function ProjectCard({
   project_name,
+  project_type,
   github,
   url,
   project_summary,
@@ -48,7 +49,10 @@ export function ProjectCard({
             </a>
           </div>
         </div>
-        <p>{project_summary}</p>
+        <div>
+          <p className="mt-4 text-lg font-bold">{project_type}</p>
+          <p>{project_summary}</p>
+        </div>
         <div className="flex items-center gap-x-4 mt-4">
           {tech_stack.map((tech) => (
             <p
