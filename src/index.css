@@ -6,6 +6,11 @@
   @apply text-gray-300;
 }
 
+:root {
+  --gray-300: rgb(209 213 219);
+  --teal-200: rgb(153 246 228);
+}
+
 .fancy-text-style {
   -webkit-text-stroke: 1px rgb(209 213 219);
   filter: drop-shadow(0 0 23px rgb(209 213 219));
@@ -81,90 +86,6 @@ li {
   text-decoration: underline;
 }
 
-/* Project Card Style */
-.project-card {
-  background-color: rgb(17 24 39);
-  position: relative;
-}
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: 0;
-  height: 2px;
-  background-color: rgb(209 213 219);
-  z-index: 1;
-}
-.project-card:hover:before {
-  background-color: rgb(153 246 228);
-}
-@media (min-width: 600px) {
-  .project-card::before {
-    width: 100px;
-  }
-}
-@media (min-width: 768px) {
-  .project-card::before {
-    width: 40px;
-  }
-}
-@media (min-width: 1280px) {
-  .project-card::before {
-    width: 100px;
-  }
-}
-@media (min-width: 1500px) {
-  .project-card::before {
-    width: 125px;
-  }
-}
-
-/* Card Styling */
-.card-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-}
-.card-container .card-glass {
-  position: relative;
-  width: 165px;
-  height: 195px;
-  background: linear-gradient(#fff2, transparent);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
-  transition: 0.5s;
-  border-radius: 10px;
-  margin: 0 -45px;
-  backdrop-filter: blur(10px);
-  transform: rotate(calc(var(--r) * 1deg));
-}
-.card-container .card-glass.tech-stack {
-  padding-top: 8px;
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-auto-rows: min-content;
-  row-gap: 13px;
-}
-.card-container:hover .card-glass {
-  transform: rotate(0deg);
-  margin: 0 10px;
-}
-.card-container .card-glass::before {
-  content: attr(data-text);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-
 /* Skill Card Glass */
 .skill-card-glass {
   position: relative;
@@ -188,69 +109,6 @@ li {
   justify-content: center;
   align-items: center;
   color: #fff;
-}
-
-/* Work Experience styling */
-.company-card {
-  position: relative;
-  width: 200px;
-  height: 250px;
-  border-radius: 14px;
-  z-index: 1111;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 5px 5px 15px rgb(209 213 219);
-  background-color: rgb(209 213 219);
-}
-.bg {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 190px;
-  height: 240px;
-  z-index: 2;
-  background: rgb(17 24 39);
-  backdrop-filter: blur(24px);
-  border-radius: 10px;
-  overflow: hidden;
-  outline: 2px solid rgb(209 213 219);
-}
-.blob {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: rgb(17 24 39);
-  opacity: 1;
-  filter: blur(12px);
-  animation: blob-bounce 5s infinite ease;
-}
-@keyframes blob-bounce {
-  0% {
-    transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
-
-  25% {
-    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
-  }
-
-  50% {
-    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
-  }
-
-  75% {
-    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
-  }
-
-  100% {
-    transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
 }
 
 /* Slider Autoplay */
