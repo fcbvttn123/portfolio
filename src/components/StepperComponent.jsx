@@ -62,6 +62,10 @@ export function StepperComponent({
             alignItems: "start",
             color: "rgb(209, 213, 219)",
           },
+          "& .MuiStepLabel-label": {
+            fontFamily: `"ui-serif", Georgia, Cambria, "Times New Roman", Times, serif`,
+            fontWeight: "bold",
+          },
         }}
       >
         {steps.map((step, index) => (
