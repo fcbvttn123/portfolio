@@ -22,7 +22,7 @@ export function HelloTextWithAnimation() {
     return () => clearInterval(interval)
   }, [])
   return (
-    <h1 className="text-4xl lg:text-5xl relative overflow-hidden hello-text-at-home-page">
+    <h1 className="text-4xl lg:text-5xl relative overflow-hidden hello-text-at-home-page circleAnimation">
       {textArray[index]}
     </h1>
   )
