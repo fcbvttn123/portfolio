@@ -18,7 +18,7 @@ export function SliderAutoplay({
     return () => clearInterval(slider)
   }, [activeStep])
   return (
-    <section className="w-full h-[550px] sm:h-[470px] md:h-[450px] lg:h-[320px] relative flex flex-col overflow-hidden">
+    <section className="w-full h-[550px] sm:h-[470px] md:h-[450px] lg:h-[320px] relative flex flex-col overflow-hidden circleAnimation appearSecond">
       <div className="lg:hidden">
         <MobileStepper
           variant="dots"

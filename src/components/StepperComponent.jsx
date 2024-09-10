@@ -28,6 +28,7 @@ export function StepperComponent({
   return (
     <Box
       sx={orientation == "horizontal" ? { width: "100%" } : { maxWidth: 400 }}
+      className="circleAnimation"
     >
       <Stepper
         activeStep={activeStep}

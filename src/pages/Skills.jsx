@@ -21,7 +21,7 @@ export function Skills() {
         stepLabelRounded={false}
         orientation={windowWidth >= 768 ? "vertical" : "horizontal"}
       />
-      <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 circleAnimation appearSecond">
         {skills[activeStep].list.map((item, index) => (
           <div
             key={item.text}
