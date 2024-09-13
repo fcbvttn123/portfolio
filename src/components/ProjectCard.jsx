@@ -50,10 +50,10 @@ export function ProjectCard({
           </div>
         </div>
         <div>
-          <p className="mt-4 text-lg font-bold">{project_type}</p>
+          <p className="mt-6 mb-1 text-lg font-bold">{project_type}</p>
           <p>{project_summary}</p>
         </div>
-        <div className="flex items-center gap-x-4 mt-4">
+        <div className="flex flex-wrap items-center gap-4 mt-4">
           {tech_stack.map((tech) => (
             <p
               key={tech}
