@@ -1,5 +1,29 @@
 export const projectsArr = [
   {
+    img_name: "recipe-sharing-app.png",
+    project_name: "Recipe Sharing App",
+    project_type: "Full Stack Web App",
+    project_desc: [
+      "Developed a blog website using React",
+      "Implemented responsive and intuitive user interfaces using HTML and Tailwind CSS",
+      "Using Google Firebase for Database and Authentication",
+      "Familiarity with Vite to build and bundle project for deployment",
+    ],
+    url: "https://fcbvttnrecipeapp.netlify.app",
+    github: "https://github.com/fcbvttn123/recipe-sharing-app.git",
+    tech_stack: [
+      "React",
+      "Node",
+      "Express",
+      "MongoDB",
+      "Stream",
+      "JWT",
+      "Firebase",
+    ],
+    project_summary:
+      "Create a web application where users can share their favorite recipes, browse recipes posted by others, and manage their own recipe collections. This platform will allow users to create an account, post recipes with ingredients and instructions, like and comment on recipes, and search for recipes by various criteria.",
+  },
+  {
     img_name: "blog.png",
     project_name: "Blog Website",
     project_type: "Full Stack Web App",
