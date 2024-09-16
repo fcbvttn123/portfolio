@@ -19,6 +19,7 @@ export const projectsArr = [
       "Stream",
       "JWT",
       "Firebase",
+      "Material UI",
     ],
     project_summary:
       "Create a web application where users can share their favorite recipes, browse recipes posted by others, and manage their own recipe collections. This platform will allow users to create an account, post recipes with ingredients and instructions, like and comment on recipes, and search for recipes by various criteria.",
