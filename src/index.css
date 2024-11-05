@@ -31,6 +31,15 @@ li {
   text-align: start;
 }
 
+/* Layout.jsx */
+.layout {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+}
+
 /* Hello Text Animation */
 .hello-text-at-home-page {
   -webkit-text-stroke: 1px rgb(209 213 219);
