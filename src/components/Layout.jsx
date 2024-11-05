@@ -9,6 +9,7 @@ export default function Layout() {
   return (
     <div
       className="layout h-full flex gap-y-14 flex-col justify-between py-3 px-4 md:px-10 lg:max-w-5xl xl:max-w-[1400px] lg:mx-auto"
+      // This event is used to add glow effect while moving the mouse
       onMouseMove={(e) => {
         let { currentTarget: target } = e
         let rect = target.getBoundingClientRect()
