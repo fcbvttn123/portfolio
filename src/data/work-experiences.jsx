@@ -29,34 +29,6 @@ export const workExperiences = [
     ),
   },
   {
-    label: "Support Technologist - Intern",
-    imageName: "sheridan.jpeg",
-    company: "Sheridan College",
-    period: "09/23 - 05/24",
-    content: (
-      <MacScreen>
-        <code>
-          <p className="mb-4 mt-4">What I've done:</p>
-          <ul>
-            <li>
-              Provided Classroom support to clients using the mobile labs, smart
-              classrooms, and Computer labs.
-            </li>
-            <li>
-              Resolved inquiries regarding desktop and laptop computers,
-              operating systems, PC applications software and voice/data/video
-              networks.
-            </li>
-            <li>
-              Working in IT Service Desk with troubleshooting knowledge of
-              business hardware, software, and solutions.
-            </li>
-          </ul>
-        </code>
-      </MacScreen>
-    ),
-  },
-  {
     label: "React Developer - Intern",
     imageName: "sksq.jpeg",
     company: "Skill Squirrel",
@@ -75,6 +47,34 @@ export const workExperiences = [
             </li>
             <li>Working with various APIs and third-party tools.</li>
             <li>Applying plain JavaScript for website keyboard navigation.</li>
+          </ul>
+        </code>
+      </MacScreen>
+    ),
+  },
+  {
+    label: "Support Technologist - Part Timer",
+    imageName: "sheridan.jpeg",
+    company: "Sheridan College",
+    period: "09/23 - current",
+    content: (
+      <MacScreen>
+        <code>
+          <p className="mb-4 mt-4">What I've done:</p>
+          <ul>
+            <li>
+              Provided Classroom support to clients using the mobile labs, smart
+              classrooms, and Computer labs.
+            </li>
+            <li>
+              Resolved inquiries regarding desktop and laptop computers,
+              operating systems, PC applications software and voice/data/video
+              networks.
+            </li>
+            <li>
+              Working in IT Service Desk with troubleshooting knowledge of
+              business hardware, software, and solutions.
+            </li>
           </ul>
         </code>
       </MacScreen>
