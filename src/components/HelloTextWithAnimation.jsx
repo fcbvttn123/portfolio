@@ -22,7 +22,20 @@ export function HelloTextWithAnimation() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="hello-text-at-home-page flex gap-x-2 lg:gap-x-4 text-3xl sm:text-4xl lg:text-5xl pl-2">
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -10,
+      }}
+      animate={{
+        opacity: 1,
+        y: 10,
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+      className="hello-text-at-home-page flex gap-x-2 lg:gap-x-4 text-3xl sm:text-4xl lg:text-5xl pl-2"
+    >
       <span>I'm a</span>
       <h1 className="relative overflow-hidden flex-1">
         {textArray[index]}
@@ -34,6 +47,6 @@ export function HelloTextWithAnimation() {
           transition={{ duration: 3, ease: "easeOut", repeat: Infinity }}
         ></motion.div>
       </h1>
-    </div>
+    </motion.div>
   );
 }

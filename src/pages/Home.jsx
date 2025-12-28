@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { HelloTextWithAnimation } from "../components/HelloTextWithAnimation";
+import { motion } from "motion/react";
 
 function NavigationCircle({ path, text, appearOrder }) {
   return (
@@ -24,7 +25,34 @@ export function Home() {
     <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10 xl:px-[150px]">
       {/* Flexbox (Desktop) - Left Item */}
       <div className="flex-1 flex-grow-[2]">
-        <p className="tracking-widest leading-6 mb-4">Hello, I'm David 👋</p>
+        <motion.p
+          className="tracking-widest leading-6 mb-4"
+          initial={{
+            opacity: 0,
+            y: -10,
+          }}
+          animate={{
+            opacity: 1,
+            y: 10,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+        >
+          Hello, I'm David
+          <motion.span
+            className="origin-center inline-block"
+            animate={{
+              rotate: [0, 45, -45, 0],
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+            }}
+          >
+            👋
+          </motion.span>
+        </motion.p>
         <HelloTextWithAnimation />
         <h2 className="text-xl lg:text-xl mb-1 mt-4 tracking-wide fancy-text-style circleAnimation">
           A Bit About Me
