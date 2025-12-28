@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { HelloTextWithAnimation } from "../components/HelloTextWithAnimation"
+import { Link } from "react-router-dom";
+import { HelloTextWithAnimation } from "../components/HelloTextWithAnimation";
 
 function NavigationCircle({ path, text, appearOrder }) {
   return (
@@ -16,14 +16,14 @@ function NavigationCircle({ path, text, appearOrder }) {
         {text}
       </button>
     </Link>
-  )
+  );
 }
 
 export function Home() {
   return (
-    <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10">
+    <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10 xl:px-[150px]">
       {/* Flexbox (Desktop) - Left Item */}
-      <div className="md:max-w-sm lg:max-w-lg">
+      <div className="flex-1 flex-grow-[2]">
         <HelloTextWithAnimation />
         <h2 className="text-xl lg:text-xl mb-1 mt-4 tracking-wide fancy-text-style circleAnimation">
           A Bit About Me
@@ -44,7 +44,7 @@ export function Home() {
         </div>
       </div>
       {/* Flexbox (Desktop) - Right Item */}
-      <div className="w-80 h-80 rounded-full mt-10 mx-auto md:mx-0 circleAnimation">
+      <div className="flex-1 flex items-center justify-center xl:justify-end mt-10 xl:mt-0 circleAnimation">
         <img
           className="w-80 h-80 rounded-full"
           src="./images/IMG_5010.jpeg"
@@ -53,5 +53,5 @@ export function Home() {
         />
       </div>
     </section>
-  )
+  );
 }
