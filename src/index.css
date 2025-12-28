@@ -45,26 +45,6 @@ li {
   -webkit-text-stroke: 1px rgb(209 213 219);
   color: transparent;
 }
-.hello-text-at-home-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgb(17 24 39);
-  border-left: 3px solid rgb(209 213 219);
-  animation: moveLeftToRight 3s ease-out 0s infinite;
-}
-
-@keyframes moveLeftToRight {
-  0% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 99% 0;
-  }
-  100% {
-    translate: 0 0;
-  }
-}
 
 /* Nav Link Button styling */
 .nav-link-button {

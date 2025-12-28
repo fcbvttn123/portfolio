@@ -24,6 +24,7 @@ export function Home() {
     <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10 xl:px-[150px]">
       {/* Flexbox (Desktop) - Left Item */}
       <div className="flex-1 flex-grow-[2]">
+        <p className="tracking-widest leading-6 mb-4">Hello, I'm David 👋</p>
         <HelloTextWithAnimation />
         <h2 className="text-xl lg:text-xl mb-1 mt-4 tracking-wide fancy-text-style circleAnimation">
           A Bit About Me
