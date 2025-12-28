@@ -1,0 +1,5 @@
++) Add new text and waving hand animation for the Home Page
+
+    "Hello, I'm David"
+
++) Add STAGGER CHILDREN for the Home Page 
