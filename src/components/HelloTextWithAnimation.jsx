@@ -32,7 +32,7 @@ export function HelloTextWithAnimation() {
         y: 10,
       }}
       transition={{
-        duration: 0.5,
+        duration: 1,
       }}
       className="hello-text-at-home-page flex gap-x-2 lg:gap-x-4 text-3xl sm:text-4xl lg:text-5xl pl-2"
     >
