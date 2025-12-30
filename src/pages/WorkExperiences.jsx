@@ -5,7 +5,7 @@ import { isLastElement } from "../utils";
 export function WorkExperiences() {
   const [isFocused, setIsFocused] = useState(WORK_EXPERIENCE[0].id);
   return (
-    <section className="h-full text-foreground flex items-center gap-x-20">
+    <section className="h-full text-foreground flex items-center gap-10">
       {/* Work Info */}
       <div className="flex-1">
         {WORK_EXPERIENCE.map((work, index) => (
@@ -20,6 +20,7 @@ export function WorkExperiences() {
                 srcSet={`/images/${work.logo}`}
               />
               <p>{work.role}</p>
+              <p className="hidden xl:block"> - {work.positionType}</p>
             </div>
             <div
               className="border-l-2 ml-5 mt-2 pl-4 overflow-hidden duration-300 h-7 flex flex-col justify-center gap-y-2 w-full"
@@ -29,14 +30,14 @@ export function WorkExperiences() {
               }}
             >
               <div
-                className="hidden items-center"
+                className="hidden items-center text-sm"
                 style={{ display: isFocused === work.id && "flex" }}
               >
                 <span className="inline-block mr-2 w-1 aspect-square rounded-full bg-foreground"></span>
                 <p>{work.company}</p>
               </div>
               <div
-                className="hidden items-center"
+                className="hidden items-center text-sm"
                 style={{ display: isFocused === work.id && "flex" }}
               >
                 <span className="inline-block mr-2 w-1 aspect-square rounded-full bg-foreground"></span>
