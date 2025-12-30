@@ -11,7 +11,7 @@ export function WorkExperiences() {
         {WORK_EXPERIENCE.map((work, index) => (
           <div
             key={work.id}
-            className={`mt-4 overflow-hidden group cursor-pointer ${
+            className={`mt-4 p-2 w-[250px] xl:w-[350px] overflow-hidden group cursor-pointer duration-300 rounded-lg hover:bg-foreground/10 ${
               isFocused === work.id
                 ? "text-foreground/100"
                 : "text-foreground/50"
