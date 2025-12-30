@@ -1,5 +1,3 @@
-+) Add new text and waving hand animation for the Home Page
++) Experiences
 
-    "Hello, I'm David"
-
-+) Add STAGGER CHILDREN for the Home Page 
++) Refactor index.css file
