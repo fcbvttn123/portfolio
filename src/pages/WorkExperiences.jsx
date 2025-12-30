@@ -8,12 +8,15 @@ export function WorkExperiences() {
       <div className="flex-1">
         {workExperiences.map((work, index) => (
           <div key={work.id} className="mt-4 overflow-hidden group">
-            <div className="flex gap-x-2">
-              <div className="w-6 aspect-square rounded-full bg-gray-600"></div>
+            <div className="flex items-center gap-x-2">
+              <img
+                className="w-10 aspect-square rounded-full"
+                srcSet={`/images/${work.logo}`}
+              />
               <p>{work.role}</p>
             </div>
             <div
-              className="overflow-hidden duration-300 h-5 group-hover:h-[80px] flex flex-col justify-center gap-y-2 pl-2 w-full mt-2 ml-3 border-l-2"
+              className="border-l-2 ml-5 mt-2 pl-4 overflow-hidden duration-300 h-7 group-hover:h-[60px] flex flex-col justify-center gap-y-2 w-full"
               style={{
                 border: isLastElement(workExperiences, index) && "none",
               }}
