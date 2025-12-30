@@ -5,13 +5,17 @@ import { isLastElement } from "../utils";
 export function WorkExperiences() {
   const [isFocused, setIsFocused] = useState(WORK_EXPERIENCE[0].id);
   return (
-    <section className="h-full text-foreground flex items-center gap-10">
+    <section className="h-full flex items-center gap-10">
       {/* Work Info */}
       <div className="flex-1">
         {WORK_EXPERIENCE.map((work, index) => (
           <div
             key={work.id}
-            className="mt-4 overflow-hidden group cursor-pointer"
+            className={`mt-4 overflow-hidden group cursor-pointer ${
+              isFocused === work.id
+                ? "text-foreground/100"
+                : "text-foreground/50"
+            }`}
             onClick={(e) => setIsFocused(work.id)}
           >
             <div className="flex items-center gap-x-2">
@@ -48,7 +52,7 @@ export function WorkExperiences() {
         ))}
       </div>
       {/* Work Description */}
-      <div className="flex-[2] bg-gray-600 h-[300px]"></div>
+      <div className="flex-[2] bg-gray-600 min-h-[450px]"></div>
     </section>
   );
 }
