@@ -1,4 +1,4 @@
-export const workExperiences = [
+export const WORK_EXPERIENCE = [
   {
     id: "lynch",
     role: "Network Administrator - Full Time",
@@ -14,14 +14,14 @@ export const workExperiences = [
     period: "09/23 - current",
   },
   {
-    id: "ss",
+    id: "skill_squirrel",
     role: "React Developer - Intern",
     logo: "sksq.jpeg",
     company: "Skill Squirrel",
     period: "05/24 - 09/24",
   },
   {
-    id: "mot",
+    id: "ministry_of_transportation",
     role: "Technical Analyst - Intern",
     logo: "first-intern-job-icon.png",
     company: "Ministry of Transportation",

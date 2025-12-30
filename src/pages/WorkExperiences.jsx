@@ -1,13 +1,19 @@
-import { workExperiences } from "../constants";
+import { useState } from "react";
+import { WORK_EXPERIENCE } from "../constants";
 import { isLastElement } from "../utils";
 
 export function WorkExperiences() {
+  const [isFocused, setIsFocused] = useState(WORK_EXPERIENCE[0].id);
   return (
     <section className="h-full text-foreground flex items-center gap-x-20">
       {/* Work Info */}
       <div className="flex-1">
-        {workExperiences.map((work, index) => (
-          <div key={work.id} className="mt-4 overflow-hidden group">
+        {WORK_EXPERIENCE.map((work, index) => (
+          <div
+            key={work.id}
+            className="mt-4 overflow-hidden group cursor-pointer"
+            onClick={(e) => setIsFocused(work.id)}
+          >
             <div className="flex items-center gap-x-2">
               <img
                 className="w-10 aspect-square rounded-full"
@@ -16,16 +22,23 @@ export function WorkExperiences() {
               <p>{work.role}</p>
             </div>
             <div
-              className="border-l-2 ml-5 mt-2 pl-4 overflow-hidden duration-300 h-7 group-hover:h-[60px] flex flex-col justify-center gap-y-2 w-full"
+              className="border-l-2 ml-5 mt-2 pl-4 overflow-hidden duration-300 h-7 flex flex-col justify-center gap-y-2 w-full"
               style={{
-                border: isLastElement(workExperiences, index) && "none",
+                border: isLastElement(WORK_EXPERIENCE, index) && "none",
+                height: isFocused === work.id && "60px",
               }}
             >
-              <div className="hidden group-hover:flex items-center">
+              <div
+                className="hidden items-center"
+                style={{ display: isFocused === work.id && "flex" }}
+              >
                 <span className="inline-block mr-2 w-1 aspect-square rounded-full bg-foreground"></span>
                 <p>{work.company}</p>
               </div>
-              <div className="hidden group-hover:flex items-center">
+              <div
+                className="hidden items-center"
+                style={{ display: isFocused === work.id && "flex" }}
+              >
                 <span className="inline-block mr-2 w-1 aspect-square rounded-full bg-foreground"></span>
                 <p>{work.period}</p>
               </div>
