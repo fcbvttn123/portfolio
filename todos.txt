@@ -1,4 +1,6 @@
-+) Apply interval for Work Experiences
++) Work Experience: mobile design
+
++) Work Experience: time interval
 
 +) Footer: make Card and Copy for Phone and Email
 

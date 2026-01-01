@@ -164,7 +164,7 @@ article.slide.nextSlide {
     filter: opacity(10%) contrast(105%);
   }
   .card-inner {
-    @apply w-full h-full p-[20px] overflow-hidden rounded-[inherit] font-black;
+    @apply w-full h-full p-[20px] overflow-hidden rounded-[inherit];
     background-color: var(--contrast);
   }
 }
