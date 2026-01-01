@@ -2,6 +2,8 @@
 
 +) Work Experience: time interval
 
++) Mobile Navigation: replace MUI by custom drawer
+
 +) Footer: make Card and Copy for Phone and Email
 
 +) Apply Universe style for social media

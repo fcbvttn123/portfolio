@@ -71,7 +71,7 @@ export function Home() {
           ideas into impactful digital experiences.
         </motion.p>
         <motion.div
-          className="lg:mt-6 flex items-center justify-between md:justify-start gap-x-2 lg:gap-x-4"
+          className="mt-6 flex items-center justify-between md:justify-start gap-x-2 lg:gap-x-4"
           variants={containerVariants}
           initial="hidden"
           animate="show"
