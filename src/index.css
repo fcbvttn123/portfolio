@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-color {
-  @apply text-gray-300;
-}
-
 :root {
   --gray-300: rgb(209 213 219);
   --teal-200: rgb(153 246 228);
@@ -147,5 +143,28 @@ article.slide.nextSlide {
 @media (min-width: 1500px) {
   .project-card::before {
     width: 125px;
+  }
+}
+
+/* reusable UI styles */
+@layer components {
+  .card {
+    --bg: #e8e8e8;
+    --contrast: #111827;
+    --grey: #93a1a1;
+    @apply relative p-[9px] rounded-[35px] bg-foreground;
+  }
+  .card-overlay {
+    @apply absolute inset-0 pointer-events-none rounded-[inherit];
+    background: repeating-conic-gradient(
+        var(--bg) 0.0000001%,
+        var(--grey) 0.000104%
+      )
+      60% 60% / 600% 600%;
+    filter: opacity(10%) contrast(105%);
+  }
+  .card-inner {
+    @apply w-full h-full p-[20px] overflow-hidden rounded-[inherit] font-black;
+    background-color: var(--contrast);
   }
 }

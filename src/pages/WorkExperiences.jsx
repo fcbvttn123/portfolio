@@ -1,23 +1,29 @@
 import { useState } from "react";
-import { WORK_EXPERIENCE } from "../constants";
+import { WORK_EXPERIENCES } from "../constants";
 import { isLastElement } from "../utils";
+import { Card } from "../components/Card";
+import { AnimatePresence, motion } from "motion/react";
+
+const MotionCard = motion.create(Card);
 
 export function WorkExperiences() {
-  const [isFocused, setIsFocused] = useState(WORK_EXPERIENCE[0].id);
+  const [isFocused, setIsFocused] = useState(WORK_EXPERIENCES[0].id);
   return (
     <section className="h-full flex items-center gap-10">
-      {/* Work Info */}
+      {/* section 1 */}
       <div className="flex-1">
-        {WORK_EXPERIENCE.map((work, index) => (
+        {WORK_EXPERIENCES.map((work, index) => (
+          // work card
           <div
             key={work.id}
-            className={`mt-4 p-2 w-[250px] xl:w-[350px] overflow-hidden group cursor-pointer duration-300 rounded-lg hover:bg-foreground/10 ${
+            className={`mt-2 p-2 w-[250px] xl:w-[350px] overflow-hidden group cursor-pointer duration-300 rounded-lg hover:bg-foreground/10 ${
               isFocused === work.id
                 ? "text-foreground/100"
                 : "text-foreground/50"
             }`}
             onClick={(e) => setIsFocused(work.id)}
           >
+            {/* image, role, position type */}
             <div className="flex items-center gap-x-2">
               <img
                 className="w-10 aspect-square rounded-full"
@@ -26,10 +32,11 @@ export function WorkExperiences() {
               <p>{work.role}</p>
               <p className="hidden xl:block"> - {work.positionType}</p>
             </div>
+            {/* the vertical line, company name, period */}
             <div
               className="border-l-2 ml-5 mt-2 pl-4 overflow-hidden duration-300 h-7 flex flex-col justify-center gap-y-2 w-full"
               style={{
-                border: isLastElement(WORK_EXPERIENCE, index) && "none",
+                border: isLastElement(WORK_EXPERIENCES, index) && "none",
                 height: isFocused === work.id && "60px",
               }}
             >
@@ -51,50 +58,32 @@ export function WorkExperiences() {
           </div>
         ))}
       </div>
-      {/* Work Description */}
-      <div className="flex-[2] bg-gray-600 min-h-[450px]"></div>
+      {/* section 2 */}
+      <div className="flex-[2] h-[400px] relative">
+        <AnimatePresence mode="wait">
+          {WORK_EXPERIENCES.map((work) => {
+            if (work.id === isFocused) {
+              return (
+                <MotionCard
+                  key={work.id}
+                  className="w-full h-full absolute inset-0"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 50 }}
+                >
+                  <ul>
+                    {work.whatYouDid.map((e) => (
+                      <li key={e} className="mt-[30px]">
+                        {e}
+                      </li>
+                    ))}
+                  </ul>
+                </MotionCard>
+              );
+            }
+          })}
+        </AnimatePresence>
+      </div>
     </section>
   );
 }
-
-// import { useEffect, useState } from "react"
-// import { StepperComponent } from "../components/StepperComponent"
-// import {
-//   workExperiences,
-//   workExperiencesMobileDesign,
-// } from "../data/work-experiences.jsx"
-// import { SliderAutoplay } from "../components/SliderAutoplay.jsx"
-
-// export function WorkExperiences() {
-//   const [activeStep, setActiveStep] = useState(0)
-//   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-//   useEffect(() => {
-//     function handleResize() {
-//       setWindowWidth(window.innerWidth)
-//     }
-//     window.addEventListener("resize", handleResize)
-//   }, [])
-//   return (
-//     <div className="flex justify-between items-start gap-x-32">
-//       <div className="hidden lg:block">
-//         <StepperComponent
-//           steps={workExperiences}
-//           activeStep={activeStep}
-//           setActiveStep={setActiveStep}
-//           stepLabelRounded={true}
-//           showStepContent={true}
-//         />
-//       </div>
-//       <div className="flex-1">
-//         <SliderAutoplay
-//           steps={
-//             windowWidth <= 1024 ? workExperiencesMobileDesign : workExperiences
-//           }
-//           activeStep={activeStep}
-//           setActiveStep={setActiveStep}
-//           secondsSlideStaying={4}
-//         />
-//       </div>
-//     </div>
-//   )
-// }

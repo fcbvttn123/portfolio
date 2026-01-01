@@ -1,3 +1,5 @@
++) Apply interval for Work Experiences
+
 +) Footer: make Card and Copy for Phone and Email
 
 +) Apply Universe style for social media

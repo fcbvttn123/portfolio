@@ -1,4 +1,4 @@
-export const WORK_EXPERIENCE = [
+export const WORK_EXPERIENCES = [
   {
     id: "lynch",
     role: "Network Administrator",
@@ -6,6 +6,11 @@ export const WORK_EXPERIENCE = [
     logo: "lynch.png",
     company: "Lynch Fluid Controls",
     period: "06/25 - current",
+    whatYouDid: [
+      "Managing Lynch Network: Layer-2 Switches (Dell PowerConnect), Multilayer Switch/Router (Inter-VLAN Routing), SAN, UTM Firewall (Sophos), Meraki Access Points, Meraki PoE Switches, Security Camera VLAN (Reolink).",
+      "Administered VMs using VMware vCenter for 3 ESXi hypervisors, hosted on Dell PowerEdge R710 servers.",
+      "Developed and customized features in MS Business Central using AL to support ERP processes. Integrated Shopify as Lynch Storefront using Liquid and MS 365 to automate business workflows.",
+    ],
   },
   {
     id: "sheridan",
@@ -14,6 +19,11 @@ export const WORK_EXPERIENCE = [
     logo: "sheridan.jpeg",
     company: "Sheridan College",
     period: "09/23 - current",
+    whatYouDid: [
+      "Provided Classroom support to clients using the mobile labs, smart classrooms, and Computer labs.",
+      "Resolved inquiries regarding desktop and laptop computers, operating systems, PC applications software and voice/data/video networks.",
+      "Working in IT Service Desk with troubleshooting knowledge of business hardware, software, and solutions.",
+    ],
   },
   {
     id: "skill_squirrel",
@@ -22,6 +32,12 @@ export const WORK_EXPERIENCE = [
     logo: "sksq.jpeg",
     company: "Skill Squirrel",
     period: "05/24 - 09/24",
+    whatYouDid: [
+      "Using React and Material UI for developing website interfaces.",
+      "Using Jira and Github to create branches and make pull/push requests.",
+      "Working with various APIs and third-party tools.",
+      "Applying plain JavaScript for website keyboard navigation.",
+    ],
   },
   {
     id: "ministry_of_transportation",
@@ -30,5 +46,10 @@ export const WORK_EXPERIENCE = [
     logo: "first-intern-job-icon.png",
     company: "Ministry of Transportation",
     period: "01/23 - 05/23",
+    whatYouDid: [
+      "Supporting creation of I&IT architecture artifacts based on Ontario Public Service.",
+      "Provided technical support in the development of SharePoint and document management repositories.",
+      "Participated in IT security activities: security assessments, development, and management of security deliverables.",
+    ],
   },
 ];
