@@ -1,6 +1,4 @@
-+) Work Experience: initial show/hide animation
-
-+) Work Experience: mobile design
++) Work Experience: update work experience details
 
 +) Work Experience: time interval
 

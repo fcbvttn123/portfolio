@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { WORK_EXPERIENCES } from "../constants";
-import { isLastElement } from "../utils";
+import { isLastElement, useWindowSize } from "../utils";
 import { Card } from "../components/Card";
 import { AnimatePresence, motion } from "motion/react";
 
 const MotionCard = motion.create(Card);
 
 export function WorkExperiences() {
+  const { width, height } = useWindowSize();
   const [isFocused, setIsFocused] = useState(WORK_EXPERIENCES[0].id);
   return (
-    <section className="h-full flex flex-col md:flex-row md:items-center gap-10">
+    <section className="sm:h-full flex flex-col md:flex-row md:items-center gap-10">
       {/* section 1 */}
       <motion.div
-        className="md:flex-1"
+        className="md:flex-1 grid grid-cols-2 md:block"
+        style={{ display: width < 450 && "block" }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -23,7 +25,7 @@ export function WorkExperiences() {
           // work card
           <div
             key={work.id}
-            className={`mt-2 p-2 w-full  xl:w-[350px] overflow-hidden group cursor-pointer duration-300 rounded-lg hover:bg-foreground/10 ${
+            className={`mt-2 p-2 w-full xl:w-[350px] overflow-hidden group cursor-pointer duration-300 rounded-lg hover:bg-foreground/10 ${
               isFocused === work.id
                 ? "text-foreground/100"
                 : "text-foreground/50"
@@ -37,26 +39,40 @@ export function WorkExperiences() {
                 srcSet={`/images/${work.logo}`}
               />
               <p>{work.role}</p>
-              <p className="block md:hidden lg:block"> - {work.positionType}</p>
+              <p
+                className="hidden lg:block"
+                style={{ display: width < 450 && "block" }}
+              >
+                {" "}
+                - {work.positionType}
+              </p>
             </div>
             {/* the vertical line, company name, period */}
             <div
-              className="border-l-2 ml-5 mt-2 pl-4 overflow-hidden duration-300 h-7 flex flex-col justify-center gap-y-2 w-full"
+              className="ml-5 mt-2 pl-4 overflow-hidden duration-300 h-7 flex flex-col justify-center gap-y-2 w-full"
               style={{
-                border: isLastElement(WORK_EXPERIENCES, index) && "none",
-                height: isFocused === work.id && "60px",
+                borderLeftWidth: isLastElement(WORK_EXPERIENCES, index)
+                  ? isFocused === work.id && 2
+                  : 2,
+                height: width > 768 ? isFocused === work.id && "65px" : "65px",
               }}
             >
               <div
                 className="hidden items-center text-sm"
-                style={{ display: isFocused === work.id && "flex" }}
+                style={{
+                  display:
+                    width > 768 ? isFocused === work.id && "flex" : "flex",
+                }}
               >
                 <span className="inline-block mr-2 w-1 aspect-square rounded-full bg-foreground"></span>
                 <p>{work.company}</p>
               </div>
               <div
                 className="hidden items-center text-sm"
-                style={{ display: isFocused === work.id && "flex" }}
+                style={{
+                  display:
+                    width > 768 ? isFocused === work.id && "flex" : "flex",
+                }}
               >
                 <span className="inline-block mr-2 w-1 aspect-square rounded-full bg-foreground"></span>
                 <p>{work.period}</p>
@@ -66,7 +82,7 @@ export function WorkExperiences() {
         ))}
       </motion.div>
       {/* section 2 */}
-      <div className="md:flex-[2] lg:flex-[1.5] xl:flex-[2] h-[400px] relative">
+      <div className="md:flex-[2] lg:flex-[1.5] xl:flex-[2] h-[480px] sm:h-[400px] relative">
         <AnimatePresence mode="wait">
           {WORK_EXPERIENCES.map((work) => {
             if (work.id === isFocused) {
@@ -80,7 +96,10 @@ export function WorkExperiences() {
                 >
                   <ul>
                     {work.whatYouDid.map((e) => (
-                      <li key={e} className="mt-[30px]">
+                      <li
+                        key={e}
+                        className="sm:mt-[20px] md:mt-[10px] lg:mt-[20px]"
+                      >
                         {e}
                       </li>
                     ))}
