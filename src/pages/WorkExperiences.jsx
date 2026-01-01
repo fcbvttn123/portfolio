@@ -9,14 +9,21 @@ const MotionCard = motion.create(Card);
 export function WorkExperiences() {
   const [isFocused, setIsFocused] = useState(WORK_EXPERIENCES[0].id);
   return (
-    <section className="h-full flex items-center gap-10">
+    <section className="h-full flex flex-col md:flex-row md:items-center gap-10">
       {/* section 1 */}
-      <div className="flex-1">
+      <motion.div
+        className="md:flex-1"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+        }}
+      >
         {WORK_EXPERIENCES.map((work, index) => (
           // work card
           <div
             key={work.id}
-            className={`mt-2 p-2 w-[250px] xl:w-[350px] overflow-hidden group cursor-pointer duration-300 rounded-lg hover:bg-foreground/10 ${
+            className={`mt-2 p-2 w-full  xl:w-[350px] overflow-hidden group cursor-pointer duration-300 rounded-lg hover:bg-foreground/10 ${
               isFocused === work.id
                 ? "text-foreground/100"
                 : "text-foreground/50"
@@ -30,7 +37,7 @@ export function WorkExperiences() {
                 srcSet={`/images/${work.logo}`}
               />
               <p>{work.role}</p>
-              <p className="hidden xl:block"> - {work.positionType}</p>
+              <p className="block md:hidden lg:block"> - {work.positionType}</p>
             </div>
             {/* the vertical line, company name, period */}
             <div
@@ -57,9 +64,9 @@ export function WorkExperiences() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
       {/* section 2 */}
-      <div className="flex-[2] h-[400px] relative">
+      <div className="md:flex-[2] lg:flex-[1.5] xl:flex-[2] h-[400px] relative">
         <AnimatePresence mode="wait">
           {WORK_EXPERIENCES.map((work) => {
             if (work.id === isFocused) {
