@@ -1,29 +1,52 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 const textArray = [
-  "Hello! I'm David Vu",
-  "I'm a Web Developer",
-  "I'm a Footballer",
-  "Nice to meet you!",
-]
+  "Software Developer",
+  "Network Engineer",
+  "System Administrator",
+];
 
 export function HelloTextWithAnimation() {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(2);
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => {
         if (prev >= textArray.length - 1) {
-          return 0
+          return 0;
         } else {
-          return prev + 1
+          return prev + 1;
         }
-      })
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <h1 className="text-4xl lg:text-5xl relative overflow-hidden hello-text-at-home-page circleAnimation">
-      {textArray[index]}
-    </h1>
-  )
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -10,
+      }}
+      animate={{
+        opacity: 1,
+        y: 10,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      className="hello-text-at-home-page flex gap-x-2 lg:gap-x-4 text-3xl sm:text-4xl lg:text-5xl pl-2"
+    >
+      <span>I'm a</span>
+      <h1 className="relative overflow-hidden flex-1">
+        {textArray[index]}
+        <motion.div
+          className="absolute inset-0 border-l-2 bg-background"
+          animate={{
+            x: [0, "100%", 0],
+          }}
+          transition={{ duration: 3, ease: "easeOut", repeat: Infinity }}
+        ></motion.div>
+      </h1>
+    </motion.div>
+  );
 }

@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-color {
-  @apply text-gray-300;
-}
-
 :root {
   --gray-300: rgb(209 213 219);
   --teal-200: rgb(153 246 228);
@@ -40,30 +36,10 @@ li {
   );
 }
 
-/* Hello Text Animation */
+/* Hello Text */
 .hello-text-at-home-page {
   -webkit-text-stroke: 1px rgb(209 213 219);
   color: transparent;
-}
-.hello-text-at-home-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgb(17 24 39);
-  border-left: 3px solid rgb(209 213 219);
-  animation: moveLeftToRight 3s ease-out 0s infinite;
-}
-
-@keyframes moveLeftToRight {
-  0% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 99% 0;
-  }
-  100% {
-    translate: 0 0;
-  }
 }
 
 /* Nav Link Button styling */
@@ -170,25 +146,28 @@ article.slide.nextSlide {
   }
 }
 
-/* Home Page - Animation for Circles */
-.circleAnimation {
-  position: relative;
-  opacity: 0;
-  top: 20px;
-  animation: moveUp 1.3s forwards;
-}
-.circleAnimation.appearSecond {
-  animation-delay: 0.5s;
-}
-.circleAnimation.appearThird {
-  animation-delay: 1s;
-}
-.circleAnimation.appearForth {
-  animation-delay: 1.5s;
-}
-@keyframes moveUp {
-  100% {
-    opacity: 1;
-    top: 0;
+/* reusable UI styles */
+@layer components {
+  .card {
+    --bg: #e8e8e8;
+    --contrast: #111827;
+    --grey: #93a1a1;
+    @apply relative p-[9px] rounded-[35px] bg-foreground;
+  }
+  .card-overlay {
+    @apply absolute inset-0 pointer-events-none rounded-[inherit];
+    background: repeating-conic-gradient(
+        var(--bg) 0.0000001%,
+        var(--grey) 0.000104%
+      )
+      60% 60% / 600% 600%;
+    filter: opacity(10%) contrast(105%);
+  }
+  .card-inner {
+    @apply w-full h-full p-[20px] overflow-x-hidden rounded-[inherit];
+    background-color: var(--contrast);
+  }
+  .card-inner::-webkit-scrollbar {
+    display: none;
   }
 }

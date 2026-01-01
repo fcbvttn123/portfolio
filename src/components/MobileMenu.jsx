@@ -1,19 +1,14 @@
-import Drawer from "@mui/material/Drawer"
-import Box from "@mui/material/Box"
-import { List, ListItem, ListItemButton } from "@mui/material"
-import { DocumentIcon } from "@heroicons/react/20/solid"
-import { ComputerDesktopIcon } from "@heroicons/react/20/solid"
-import { EnvelopeIcon } from "@heroicons/react/20/solid"
-import { BriefcaseIcon } from "@heroicons/react/20/solid"
-import { Link } from "react-router-dom"
+import Drawer from "@mui/material/Drawer";
+import Box from "@mui/material/Box";
+import { List, ListItem, ListItemButton } from "@mui/material";
+import { DocumentIcon } from "@heroicons/react/20/solid";
+import { ComputerDesktopIcon } from "@heroicons/react/20/solid";
+import { EnvelopeIcon } from "@heroicons/react/20/solid";
+import { BriefcaseIcon } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
 
 export function MobileMenu({ opened, setMobileOpen }) {
   const links = [
-    {
-      path: "/skills",
-      icon: <DocumentIcon className="text-color w-8 h-8" />,
-      text: "Skills",
-    },
     {
       path: "/projects",
       icon: <ComputerDesktopIcon className="text-color w-8 h-8" />,
@@ -29,11 +24,16 @@ export function MobileMenu({ opened, setMobileOpen }) {
       icon: <EnvelopeIcon className="text-color w-8 h-8" />,
       text: "Contact",
     },
-  ]
+  ];
   return (
     <Drawer open={opened} onClose={() => setMobileOpen(false)}>
       <Box
-        sx={{ width: 250, height: "100%", backgroundColor: "rgb(31 41 55)" }}
+        sx={{
+          width: 250,
+          height: "100%",
+          backgroundColor: "rgb(31 41 55)",
+          color: "#d1d5db",
+        }}
         role="presentation"
       >
         <List>
@@ -50,5 +50,5 @@ export function MobileMenu({ opened, setMobileOpen }) {
         </List>
       </Box>
     </Drawer>
-  )
+  );
 }

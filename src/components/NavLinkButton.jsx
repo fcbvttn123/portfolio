@@ -1,8 +1,15 @@
-import { Link, NavLink, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
 
-export function NavLinkButton({ path, text }) {
-  const location = useLocation()
-  return (
+export function NavLinkButton({ path, text, download = false }) {
+  const location = useLocation();
+  return download ? (
+    <a href={path} download>
+      <button className="nav-link-button">
+        <span className="actual-text">Resume</span>
+        <span className="nav-link-button-hover-text">Resume</span>
+      </button>
+    </a>
+  ) : (
     <Link to={path}>
       <button
         className={`nav-link-button ${
@@ -15,5 +22,5 @@ export function NavLinkButton({ path, text }) {
         </span>
       </button>
     </Link>
-  )
+  );
 }
