@@ -131,8 +131,16 @@ const itemVariants = {
   },
 };
 
-function NavigationCircle({ path, text }) {
-  return (
+function NavigationCircle({ path, text, download = false }) {
+  return download ? (
+    <a
+      href={path}
+      download
+      className="w-28 min-[540px]:w-40 sm:w-48 md:w-28 lg:w-40 h-28 min-[540px]:h-40 sm:h-48 md:h-28 lg:h-40 rounded-full border-gray-300 border-4 font-extrabold hover:bg-gray-300 hover:text-gray-900 transition-all duration-300"
+    >
+      {text}
+    </a>
+  ) : (
     <Link to={path}>
       <motion.button
         variants={itemVariants}
