@@ -4,9 +4,9 @@ import { motion } from "motion/react";
 
 export function Home() {
   return (
-    <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10 xl:px-[150px]">
+    <section className="text-color md:flex ms:items-center ms:justify-between md:justify-center md:gap-x-10 xl:gap-x-20 max-w-[1150px] mx-auto">
       {/* Flexbox (Desktop) - Left Item */}
-      <div className="flex-1 flex-grow-[2]">
+      <div className="flex-[1.5] lg:flex-[2]">
         <motion.p
           className="tracking-widest leading-6"
           initial={{
@@ -100,7 +100,10 @@ export function Home() {
         }}
         className="flex-1 flex items-center justify-center xl:justify-end mt-10 xl:mt-0 circleAnimation"
       >
-        <img className="w-80 h-80 rounded-full" src="./images/IMG_5010.jpeg" />
+        <img
+          className="aspect-square rounded-full"
+          src="./images/IMG_5010.jpeg"
+        />
       </motion.div>
     </section>
   );

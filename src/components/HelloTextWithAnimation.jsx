@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { useWindowSize } from "../utils/index";
 
 const textArray = [
   "Software Developer",
@@ -8,7 +9,8 @@ const textArray = [
 ];
 
 export function HelloTextWithAnimation() {
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState(0);
+  const { width } = useWindowSize();
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => {
@@ -34,13 +36,15 @@ export function HelloTextWithAnimation() {
       transition={{
         duration: 1,
       }}
-      className="hello-text-at-home-page flex gap-x-2 lg:gap-x-4 text-3xl sm:text-4xl lg:text-5xl pl-2"
+      className="hello-text-at-home-page flex gap-x-2 lg:gap-x-4 text-3xl sm:text-4xl md:text-3xl lg:text-5xl pl-2"
     >
       <span>I'm a</span>
-      <h1 className="relative overflow-hidden flex-1">
+      <h1 className="relative overflow-hidden flex-1 whitespace-nowrap">
         {textArray[index]}
         <motion.div
-          className="absolute inset-0 border-l-2 bg-background"
+          className={`absolute inset-0 border-l-2 bg-background ${
+            width < 420 && "hidden"
+          }`}
           animate={{
             x: [0, "100%", 0],
           }}
